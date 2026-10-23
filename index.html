@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asistente del despacho</title>
+
+  <!-- Conexión con CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Conexión con JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <p class="demo">
+      DEMOSTRACIÓN · Sustituye los datos antes de publicar
+    </p>
+
+    <h1>Tu despacho de abogados</h1>
+
+    <p>
+      Atención clara y cercana. Abre el asistente para
+      consultar información del despacho y conocer
+      cómo solicitar una cita.
+    </p>
+  </main>
+
+  <!-- Botón para abrir el asistente -->
+  <button
+    id="legal-launch"
+    class="legal-launch"
+    aria-controls="legal-chat"
+    aria-expanded="false">
+    Abrir asistente
+  </button>
+
+  <!-- Asistente virtual -->
+  <section
+    id="legal-chat"
+    class="legal-chat"
+    aria-labelledby="legal-title"
+    hidden>
+
+    <header>
+      <strong id="legal-title">
+        Asistente del despacho
+      </strong>
+
+      <button
+        id="legal-close"
+        class="legal-close"
+        aria-label="Cerrar asistente">
+        ×
+      </button>
+    </header>
+
+    <p class="legal-notice">
+      Asistente automatizado de información general.
+      No ofrece asesoría jurídica ni confirma citas.
+      No escribas datos personales, documentos
+      ni detalles confidenciales.
+    </p>
+
+    <!-- Historial del chat -->
+    <div
+      id="legal-log"
+      class="legal-log"
+      role="log"
+      aria-live="polite"
+      aria-label="Conversación">
+    </div>
+
+    <!-- Preguntas frecuentes -->
+    <nav class="legal-options" aria-label="Preguntas frecuentes">
+      <button type="button" data-question="Servicios">
+        Servicios
+      </button>
+
+      <button type="button" data-question="Horarios">
+        Horarios
+      </button>
+
+      <button type="button" data-question="Ubicación">
+        Ubicación
+      </button>
+
+      <button type="button" data-question="Honorarios">
+        Honorarios
+      </button>
+
+      <button type="button" data-question="Cita">
+        Solicitar cita
+      </button>
+    </nav>
+
+    <!-- Formulario del chat -->
+    <form id="legal-form" class="legal-form">
+      <input
+        id="legal-input"
+        aria-label="Pregunta para el asistente"
+        placeholder="Ejemplo: ¿Qué servicios ofrecen?"
+        maxlength="300"
+        required
+        autocomplete="off">
+
+      <button type="submit">
+        Enviar
+      </button>
+    </form>
+
+    <!-- Contacto por WhatsApp -->
+    <a
+      id="legal-contact"
+      class="legal-contact"
+      target="_blank"
+      rel="noopener noreferrer"
+      hidden>
+      Continuar en WhatsApp
+    </a>
+
+    <footer id="legal-footer"></footer>
+  </section>
+</body>
+</html>

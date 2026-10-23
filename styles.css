@@ -1,0 +1,183 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 16px system-ui, sans-serif;
+  background: #f4f1eb;
+  color: #18283d;
+}
+
+main {
+  max-width: 850px;
+  margin: 12vh auto;
+  padding: 24px;
+}
+
+h1 {
+  font: clamp(32px, 6vw, 58px) Georgia, serif;
+}
+
+main p {
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.demo {
+  color: #765b20;
+  font-weight: bold;
+}
+
+/* Ventana del asistente */
+.legal-chat {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  width: min(380px, calc(100vw - 40px));
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 60px #18283d33;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.legal-chat[hidden] {
+  display: none;
+}
+
+/* Encabezado */
+.legal-chat header {
+  background: #18283d;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legal-chat button,
+.legal-launch {
+  cursor: pointer;
+}
+
+.legal-close {
+  background: transparent;
+  color: white;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Aviso informativo */
+.legal-notice {
+  padding: 10px 14px;
+  margin: 0;
+  background: #fff4d7;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Historial de mensajes */
+.legal-log {
+  height: min(270px, 32dvh);
+  overflow: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legal-message {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #eef1f5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.legal-user {
+  background: #18283d;
+  color: white;
+  align-self: flex-end;
+  max-width: 90%;
+}
+
+/* Opciones de preguntas */
+.legal-options {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.legal-options button {
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 20px;
+  padding: 7px 10px;
+  color: #18283d;
+}
+
+/* Formulario */
+.legal-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+}
+
+.legal-form input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.legal-form button,
+.legal-launch {
+  background: #18283d;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px;
+}
+
+/* Botón flotante */
+.legal-launch {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+/* WhatsApp */
+.legal-contact {
+  display: block;
+  margin: 0 12px 12px;
+  padding: 10px;
+  background: #e7f5ec;
+  text-align: center;
+  color: #165330;
+  border-radius: 8px;
+}
+
+/* Pie del asistente */
+.legal-chat footer {
+  padding: 0 12px 12px;
+  font-size: 12px;
+}
+
+.legal-chat a {
+  color: #165330;
+}
+
+/* Accesibilidad */
+:focus-visible {
+  outline: 3px solid #bd8e2e;
+  outline-offset: 2px;
+}
