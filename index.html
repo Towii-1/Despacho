@@ -4,16 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Asistente del despacho</title>
+
+  <title>Atenea | Asistente Jurídico</title>
 
   <!-- Conexión con CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- Conexión con JavaScript -->
   <script src="script.js" defer></script>
 </head>
 
 <body>
+
   <main>
     <p class="demo">
       DEMOSTRACIÓN · Sustituye los datos antes de publicar
@@ -28,7 +30,7 @@
     </p>
   </main>
 
-  <!-- Botón para abrir el asistente -->
+  <!-- Botón para abrir Atenea -->
   <button
     id="legal-launch"
     class="legal-launch"
@@ -37,16 +39,17 @@
     Abrir asistente
   </button>
 
-  <!-- Asistente virtual -->
+  <!-- Ventana de Atenea -->
   <section
     id="legal-chat"
     class="legal-chat"
     aria-labelledby="legal-title"
     hidden>
 
+    <!-- Encabezado -->
     <header>
       <strong id="legal-title">
-        Asistente del despacho
+        Atenea | Asistente Virtual
       </strong>
 
       <button
@@ -57,6 +60,7 @@
       </button>
     </header>
 
+    <!-- Aviso de privacidad -->
     <p class="legal-notice">
       Asistente automatizado de información general.
       No ofrece asesoría jurídica ni confirma citas.
@@ -64,7 +68,7 @@
       ni detalles confidenciales.
     </p>
 
-    <!-- Historial del chat -->
+    <!-- Historial de conversación -->
     <div
       id="legal-log"
       class="legal-log"
@@ -73,35 +77,20 @@
       aria-label="Conversación">
     </div>
 
-    <!-- Preguntas frecuentes -->
-    <nav class="legal-options" aria-label="Preguntas frecuentes">
-      <button type="button" data-question="Servicios">
-        Servicios
-      </button>
-
-      <button type="button" data-question="Horarios">
-        Horarios
-      </button>
-
-      <button type="button" data-question="Ubicación">
-        Ubicación
-      </button>
-
-      <button type="button" data-question="Honorarios">
-        Honorarios
-      </button>
-
-      <button type="button" data-question="Cita">
-        Solicitar cita
-      </button>
+    <!-- Botones dinámicos -->
+    <nav
+      id="legal-options"
+      class="legal-options"
+      aria-label="Opciones del asistente">
     </nav>
 
-    <!-- Formulario del chat -->
+    <!-- Campo para escribir preguntas -->
     <form id="legal-form" class="legal-form">
+
       <input
         id="legal-input"
-        aria-label="Pregunta para el asistente"
-        placeholder="Ejemplo: ¿Qué servicios ofrecen?"
+        aria-label="Pregunta para Atenea"
+        placeholder="¿En qué puedo orientarte hoy?"
         maxlength="300"
         required
         autocomplete="off">
@@ -109,6 +98,7 @@
       <button type="submit">
         Enviar
       </button>
+
     </form>
 
     <!-- Contacto por WhatsApp -->
@@ -121,7 +111,12 @@
       Continuar en WhatsApp
     </a>
 
+    <!-- Pie del asistente -->
     <footer id="legal-footer"></footer>
+
   </section>
+
 </body>
 </html>
+
+
