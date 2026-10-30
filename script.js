@@ -3,42 +3,79 @@
   'use strict';
 
   // ==========================================
-  // 1. CONFIGURACIÓN DEL DESPACHO
+  // 1. INFORMACIÓN DEL DESPACHO
   // ==========================================
 
   const CONFIG = {
-    nombre: 'Atenea | Asistente Virtual',
+    nombre: 'Atenea',
+    despacho: 'EYRA LEGAL',
 
-    servicios: 'Nuestro despacho brinda información sobre asuntos civiles, familiares y mercantiles. Confirma las especialidades reales antes de publicar.',
+    horarios:
+      'Nuestros horarios de atención son:\n\n' +
+      'Lunes a viernes: 9:00 a. m. a 6:00 p. m.\n' +
+      'Sábados: 9:00 a. m. a 2:00 p. m.',
 
-    horarios: 'El horario de atención está pendiente de configurar. Para más información, comunícate con el despacho.',
+    direccion:
+      'EYRA LEGAL se encuentra en Universidad Lucerna. ' +
+      'Para conocer indicaciones más precisas, ' +
+      'puedes comunicarte con nuestro equipo.',
 
-    direccion: 'La dirección del despacho está pendiente de configurar.',
+    // Código 52 + los 10 dígitos del teléfono
+    whatsapp: '',
 
-    // Agrega 52 seguido de los 10 dígitos
-    whatsapp: '525519777010',
-
-    // URL del aviso de privacidad
+    // URL HTTPS del aviso de privacidad
     privacidad: ''
   };
 
   // ==========================================
-  // 2. ELEMENTOS DEL HTML
+  // 2. ELEMENTOS HTML
   // ==========================================
 
   const el = id => document.getElementById(id);
 
   const panel = el('legal-chat');
+  const launch = el('legal-launch');
   const input = el('legal-input');
   const log = el('legal-log');
-  const launch = el('legal-launch');
   const opciones = el('legal-options');
+  const contenido = el('legal-content');
   const contacto = el('legal-contact');
+  const footer = el('legal-footer');
 
   el('legal-title').textContent = CONFIG.nombre;
 
   // ==========================================
-  // 3. CONFIGURAR WHATSAPP
+  // 3. MOSTRAR MENSAJES
+  // ==========================================
+
+  function desplazarChat() {
+    requestAnimationFrame(() => {
+      contenido.scrollTop = contenido.scrollHeight;
+    });
+  }
+
+  function mensaje(texto, usuario = false) {
+    const p = document.createElement('p');
+
+    p.className = usuario
+      ? 'legal-message legal-user'
+      : 'legal-message';
+
+    p.textContent =
+      (usuario ? 'Tú: ' : 'Atenea: ') + texto;
+
+    log.appendChild(p);
+
+    // Máximo de 60 mensajes visibles
+    while (log.children.length > 60) {
+      log.firstElementChild.remove();
+    }
+
+    desplazarChat();
+  }
+
+  // ==========================================
+  // 4. WHATSAPP
   // ==========================================
 
   function numeroValido() {
@@ -50,9 +87,10 @@
       '?text=' + encodeURIComponent(texto);
   }
 
+  // Mostrar botón inferior de WhatsApp
   if (numeroValido()) {
     contacto.href = enlaceWhatsApp(
-      'Hola, quisiera información sobre los servicios del despacho jurídico.'
+      'Hola, quisiera información sobre EYRA LEGAL.'
     );
 
     contacto.hidden = false;
@@ -60,26 +98,31 @@
     contacto.hidden = true;
   }
 
+  // Abrir WhatsApp desde los menús
   function abrirWhatsApp() {
     if (!numeroValido()) {
       mensaje(
-        'El número de WhatsApp del despacho todavía no está configurado.'
+        'El número de WhatsApp del despacho ' +
+        'todavía no está configurado.'
       );
       return;
     }
 
     const url = enlaceWhatsApp(
-      'Hola, quisiera comunicarme con el despacho jurídico para recibir atención.'
+      'Hola, quisiera comunicarme con un asesor ' +
+      'jurídico de EYRA LEGAL.'
     );
 
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(
+      url,
+      '_blank',
+      'noopener,noreferrer'
+    );
   }
 
   // ==========================================
-  // 4. AVISO DE PRIVACIDAD
+  // 5. AVISO DE PRIVACIDAD
   // ==========================================
-
-  const footer = el('legal-footer');
 
   if (CONFIG.privacidad.startsWith('https://')) {
     const enlace = document.createElement('a');
@@ -92,34 +135,12 @@
     footer.appendChild(enlace);
   } else {
     footer.textContent =
-      'Demostración: configura el aviso de privacidad antes de publicar.';
+      'Demostración: configura el aviso de privacidad ' +
+      'antes de publicar.';
   }
 
   // ==========================================
-  // 5. MENSAJES DE CONVERSACIÓN
-  // ==========================================
-
-  function mensaje(texto, usuario = false) {
-    const p = document.createElement('p');
-
-    p.className = 'legal-message' +
-      (usuario ? ' legal-user' : '');
-
-    p.textContent =
-      (usuario ? 'Tú: ' : 'Atenea: ') + texto;
-
-    log.appendChild(p);
-
-    // Limitar el historial a 60 mensajes
-    while (log.children.length > 60) {
-      log.firstElementChild.remove();
-    }
-
-    log.scrollTop = log.scrollHeight;
-  }
-
-  // ==========================================
-  // 6. NORMALIZAR TEXTO
+  // 6. NORMALIZAR PREGUNTAS
   // ==========================================
 
   function normalizar(texto) {
@@ -137,7 +158,7 @@
   // ==========================================
 
   function mostrarOpciones(botones) {
-    // Borrar los botones anteriores
+    // Eliminar las opciones anteriores
     opciones.replaceChildren();
 
     botones.forEach(opcion => {
@@ -154,8 +175,7 @@
       opciones.appendChild(boton);
     });
 
-    // Mantener visible la respuesta nueva
-    log.scrollTop = log.scrollHeight;
+    desplazarChat();
   }
 
   // ==========================================
@@ -164,7 +184,8 @@
 
   function menuPrincipal() {
     mensaje(
-      'Con gusto te ayudaré. Selecciona una de las siguientes opciones:'
+      '¿Qué información deseas consultar? ' +
+      'Selecciona una de las siguientes opciones.'
     );
 
     mostrarOpciones([
@@ -193,42 +214,71 @@
 
   function menuServicios() {
     mensaje(
-      '⚖️ Con gusto. ¿Sobre qué área jurídica deseas obtener información?'
+      '⚖️ EYRA LEGAL cuenta con cuatro áreas ' +
+      'jurídicas. ¿Sobre cuál deseas obtener información?'
     );
 
     mostrarOpciones([
       {
-        texto: 'Derecho civil',
-        accion: () => mostrarServicio('civil')
-      },
-      {
-        texto: 'Derecho familiar',
-        accion: () => mostrarServicio('familiar')
+        texto: 'Derecho laboral',
+        accion: () => mostrarServicio('laboral')
       },
       {
         texto: 'Derecho mercantil',
         accion: () => mostrarServicio('mercantil')
       },
       {
-        texto: 'Volver al menú',
+        texto: 'Derecho familiar',
+        accion: () => mostrarServicio('familiar')
+      },
+      {
+        texto: 'Derecho penal',
+        accion: () => mostrarServicio('penal')
+      },
+      {
+        texto: 'Menú principal',
         accion: menuPrincipal
       }
     ]);
   }
 
+  // ==========================================
+  // 10. INFORMACIÓN DE CADA ÁREA
+  // ==========================================
+
   function mostrarServicio(tipo) {
     const respuestas = {
-      civil:
-        'El derecho civil comprende asuntos relacionados con contratos, obligaciones y bienes, entre otros. Consulta con el despacho si atiende tu situación.',
-
-      familiar:
-        'El derecho familiar comprende asuntos como divorcios, pensiones alimenticias y custodia, entre otros. Consulta con el despacho los servicios disponibles.',
+      laboral:
+        '⚖️ DERECHO LABORAL\n\n' +
+        'Esta área aborda las relaciones entre ' +
+        'trabajadores y empleadores, incluyendo ' +
+        'despidos, contratos laborales, salarios ' +
+        'y prestaciones.',
 
       mercantil:
-        'El derecho mercantil comprende asuntos relacionados con contratos y operaciones comerciales, entre otros. Consulta con el despacho si atiende tu situación.'
+        '⚖️ DERECHO MERCANTIL\n\n' +
+        'Esta área comprende contratos comerciales, ' +
+        'operaciones mercantiles y asuntos ' +
+        'relacionados con empresas y comerciantes.',
+
+      familiar:
+        '⚖️ DERECHO FAMILIAR\n\n' +
+        'Esta área comprende divorcios, pensiones ' +
+        'alimenticias, guarda y custodia ' +
+        'y otros asuntos familiares.',
+
+      penal:
+        '⚖️ DERECHO PENAL\n\n' +
+        'Esta área comprende asuntos relacionados ' +
+        'con delitos, denuncias, procesos penales ' +
+        'y los derechos de las personas involucradas.'
     };
 
-    mensaje(respuestas[tipo]);
+    mensaje(
+      respuestas[tipo] +
+      '\n\nPara revisar tu situación particular, ' +
+      'puedes solicitar una consulta con un abogado.'
+    );
 
     mostrarOpciones([
       {
@@ -240,7 +290,7 @@
         accion: menuAsesor
       },
       {
-        texto: 'Ver otros servicios',
+        texto: 'Otros servicios',
         accion: menuServicios
       },
       {
@@ -251,7 +301,7 @@
   }
 
   // ==========================================
-  // 10. HORARIOS
+  // 11. HORARIOS
   // ==========================================
 
   function mostrarHorarios() {
@@ -274,13 +324,17 @@
   }
 
   // ==========================================
-  // 11. UBICACIÓN
+  // 12. UBICACIÓN
   // ==========================================
 
   function mostrarUbicacion() {
     mensaje(CONFIG.direccion);
 
     mostrarOpciones([
+      {
+        texto: 'Buscar en Google Maps',
+        accion: abrirMapa
+      },
       {
         texto: 'Solicitar cita',
         accion: menuCitas
@@ -292,13 +346,29 @@
     ]);
   }
 
+  function abrirMapa() {
+    const url =
+      'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent('Universidad Lucerna');
+
+    window.open(
+      url,
+      '_blank',
+      'noopener,noreferrer'
+    );
+  }
+
   // ==========================================
-  // 12. SOLICITAR CITA
+  // 13. SOLICITAR CITA
   // ==========================================
 
   function menuCitas() {
     mensaje(
-      '📅 ¡Con gusto! Para solicitar una cita con nuestro despacho jurídico, puedes comunicarte por WhatsApp. Nuestro equipo confirmará la disponibilidad.'
+      '📅 ¡Con gusto!\n\n' +
+      'Para solicitar una cita en EYRA LEGAL, ' +
+      'puedes comunicarte por WhatsApp.\n\n' +
+      'Nuestro equipo confirmará la disponibilidad ' +
+      'de acuerdo con los horarios de atención.'
     );
 
     mostrarOpciones([
@@ -318,12 +388,17 @@
   }
 
   // ==========================================
-  // 13. HABLAR CON UN ASESOR
+  // 14. HABLAR CON UN ASESOR
   // ==========================================
 
   function menuAsesor() {
     mensaje(
-      '⚖️ ¡Por supuesto! Con gusto puedo ayudarte a contactar con uno de nuestros asesores jurídicos. Para recibir atención personalizada, selecciona "Hablar por WhatsApp".'
+      '⚖️ ¡Por supuesto!\n\n' +
+      'Con gusto puedo ayudarte a contactar ' +
+      'con un asesor jurídico de EYRA LEGAL.\n\n' +
+      'Selecciona "Hablar por WhatsApp" para ' +
+      'continuar. La atención dependerá de ' +
+      'la disponibilidad de nuestro equipo.'
     );
 
     mostrarOpciones([
@@ -332,31 +407,33 @@
         accion: abrirWhatsApp
       },
       {
-        texto: 'Volver al menú principal',
+        texto: 'Menú principal',
         accion: menuPrincipal
       }
     ]);
   }
 
   // ==========================================
-  // 14. RECONOCIMIENTO DE PREGUNTAS
+  // 15. RECONOCIMIENTO DE PREGUNTAS
   // ==========================================
 
   function responder(texto) {
     const t = normalizar(texto);
 
-    // Solicitudes de atención humana
+    // Hablar con una persona o asesor
     if (
       /\b(asesor|asesora|asesores|abogado|abogada|representante|humano|humana)\b/.test(t) ||
       /atencion personalizada/.test(t) ||
-      /\b(hablar|comunicarme|contactar)\b/.test(t) &&
-      /\b(alguien|persona|despacho)\b/.test(t)
+      (
+        /\b(hablar|comunicarme|contactar)\b/.test(t) &&
+        /\b(alguien|persona|despacho)\b/.test(t)
+      )
     ) {
       menuAsesor();
       return;
     }
 
-    // Solicitudes de cita
+    // Solicitud de cita
     if (
       /\b(cita|citas|agendar|reservar|reservacion)\b/.test(t)
     ) {
@@ -364,27 +441,39 @@
       return;
     }
 
-    // Derecho civil
-    if (/\b(civil|civiles)\b/.test(t)) {
-      mostrarServicio('civil');
+    // Derecho laboral
+    if (
+      /\b(laboral|trabajo|despido|salario|empleo|prestaciones)\b/.test(t)
+    ) {
+      mostrarServicio('laboral');
+      return;
+    }
+
+    // Derecho mercantil
+    if (
+      /\b(mercantil|comercial|empresa|comercio)\b/.test(t)
+    ) {
+      mostrarServicio('mercantil');
       return;
     }
 
     // Derecho familiar
     if (
-      /\b(familiar|familia|divorcio|custodia)\b/.test(t)
+      /\b(familiar|familia|divorcio|custodia|alimentos)\b/.test(t)
     ) {
       mostrarServicio('familiar');
       return;
     }
 
-    // Derecho mercantil
-    if (/\b(mercantil|comercial)\b/.test(t)) {
-      mostrarServicio('mercantil');
+    // Derecho penal
+    if (
+      /\b(penal|delito|denuncia|delincuencia)\b/.test(t)
+    ) {
+      mostrarServicio('penal');
       return;
     }
 
-    // Servicios
+    // Servicios generales
     if (
       /\b(servicio|servicios|areas|especialidades)\b/.test(t)
     ) {
@@ -394,7 +483,7 @@
 
     // Horarios
     if (
-      /\b(horario|horarios|abren|cierran|atienden)\b/.test(t)
+      /\b(horario|horarios|abren|cierran|atienden|sabado|lunes|viernes)\b/.test(t)
     ) {
       mostrarHorarios();
       return;
@@ -402,13 +491,13 @@
 
     // Ubicación
     if (
-      /\b(ubicacion|direccion|oficina|oficinas|donde)\b/.test(t)
+      /\b(ubicacion|direccion|oficina|oficinas|donde|lucerna|universidad)\b/.test(t)
     ) {
       mostrarUbicacion();
       return;
     }
 
-    // WhatsApp y contacto
+    // Contacto
     if (
       /\b(whatsapp|telefono|contacto|numero)\b/.test(t)
     ) {
@@ -417,12 +506,14 @@
     }
 
     // Saludos
-    if (/\b(hola|buenas|buenos|saludos)\b/.test(t)) {
+    if (
+      /\b(hola|buenas|buenos|saludos)\b/.test(t)
+    ) {
       menuPrincipal();
       return;
     }
 
-    // Volver al menú
+    // Regresar
     if (
       /\b(menu|inicio|volver|regresar)\b/.test(t)
     ) {
@@ -430,14 +521,18 @@
       return;
     }
 
-    // Pregunta desconocida
+    // Preguntas no reconocidas
     mensaje(
-      'Lo siento, todavía no cuento con una respuesta para esa pregunta. Puedo orientarte sobre nuestros servicios, horarios, ubicación y solicitudes de cita.'
+      'No tengo una respuesta preparada para ' +
+      'esa pregunta. Puedo informarte sobre ' +
+      'derecho laboral, mercantil, familiar ' +
+      'y penal, además de horarios, ubicación ' +
+      'y solicitudes de cita.'
     );
 
     mostrarOpciones([
       {
-        texto: 'Ver servicios',
+        texto: 'Servicios jurídicos',
         accion: menuServicios
       },
       {
@@ -452,7 +547,7 @@
   }
 
   // ==========================================
-  // 15. ENVIAR MENSAJES ESCRITOS
+  // 16. ENVIAR MENSAJES ESCRITOS
   // ==========================================
 
   function enviar(texto) {
@@ -464,8 +559,17 @@
     responder(texto);
   }
 
+  el('legal-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    enviar(input.value);
+
+    input.value = '';
+    input.focus();
+  });
+
   // ==========================================
-  // 16. ABRIR Y CERRAR ATENEA
+  // 17. ABRIR Y CERRAR ATENEA
   // ==========================================
 
   function abrir(abierto) {
@@ -476,12 +580,12 @@
       String(abierto)
     );
 
-    launch.textContent = abierto
-      ? 'Cerrar asistente'
-      : 'Abrir asistente';
+    // Conservamos el texto original del botón
+    launch.textContent = 'Abrir asistente';
 
     if (abierto) {
       input.focus();
+      desplazarChat();
     } else {
       launch.focus();
     }
@@ -502,27 +606,19 @@
   });
 
   // ==========================================
-  // 17. FORMULARIO DEL CHAT
-  // ==========================================
-
-  el('legal-form').addEventListener('submit', e => {
-    e.preventDefault();
-
-    enviar(input.value);
-
-    input.value = '';
-    input.focus();
-  });
-
-  // ==========================================
   // 18. BIENVENIDA DE ATENEA
   // ==========================================
 
   mensaje(
-    '¡Bienvenido(a)! ⚖️ Soy Atenea, tu asistente virtual del despacho jurídico. Estoy aquí para brindarte información sobre nuestros servicios y orientarte en tus consultas generales. ¿En qué puedo ayudarte hoy?'
+    '¡Bienvenido(a)! ⚖️ Soy Atenea, ' +
+    'tu asistente virtual de EYRA LEGAL.\n\n' +
+    'Estoy aquí para brindarte información ' +
+    'sobre nuestros servicios jurídicos ' +
+    'y orientarte en tus consultas generales.\n\n' +
+    '¿En qué puedo ayudarte hoy?'
   );
 
-  // Mostrar botones iniciales
+  // Primer menú
   mostrarOpciones([
     {
       texto: 'Servicios jurídicos',

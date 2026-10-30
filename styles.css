@@ -1,6 +1,7 @@
 
 /* ==========================================
-   1. ESTILOS GENERALES
+   1. ESTILOS ORIGINALES DE LA PÁGINA
+   NO MODIFICADOS
 ========================================== */
 
 * {
@@ -34,232 +35,8 @@ main p {
   font-weight: bold;
 }
 
-
 /* ==========================================
-   2. VENTANA PRINCIPAL DE ATENEA
-========================================== */
-
-.legal-chat {
-  position: fixed;
-  right: 20px;
-  bottom: 75px;
-
-  width: min(380px, calc(100vw - 40px));
-  max-height: calc(100dvh - 95px);
-
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 15px 60px #18283d33;
-  border: 1px solid #ddd;
-
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-  z-index: 1000;
-}
-
-.legal-chat[hidden] {
-  display: none;
-}
-
-
-/* ==========================================
-   3. ENCABEZADO DEL ASISTENTE
-========================================== */
-
-.legal-chat header {
-  background: #18283d;
-  color: white;
-  padding: 14px 16px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-
-  flex-shrink: 0;
-}
-
-.legal-chat header strong {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.legal-chat button,
-.legal-launch {
-  cursor: pointer;
-}
-
-.legal-close {
-  background: transparent;
-  color: white;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-  padding: 5px 10px;
-  font-size: 16px;
-}
-
-
-/* ==========================================
-   4. AVISO INFORMATIVO
-========================================== */
-
-.legal-notice {
-  padding: 10px 14px;
-  margin: 0;
-
-  background: #fff4d7;
-  font-size: 12px;
-  line-height: 1.5;
-
-  flex-shrink: 0;
-}
-
-
-/* ==========================================
-   5. HISTORIAL DE MENSAJES
-========================================== */
-
-.legal-log {
-  min-height: 0;
-  max-height: 180px;
-
-  overflow-y: auto;
-  padding: 12px 14px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.legal-message {
-  margin: 0;
-  padding: 10px 12px;
-
-  border-radius: 12px;
-  background: #eef1f5;
-
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  font-size: 13px;
-  line-height: 1.5;
-
-  flex-shrink: 0;
-}
-
-/* Mensajes del usuario */
-.legal-user {
-  background: #18283d;
-  color: white;
-  align-self: flex-end;
-  max-width: 90%;
-}
-
-
-/* ==========================================
-   6. BOTONES DINÁMICOS DE ATENEA
-========================================== */
-
-.legal-options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 7px;
-  padding: 10px 15px;
-
-  width: 100%;
-  min-height: 0;
-  overflow-y: auto;
-}
-
-/* Botones pequeños y redondeados */
-.legal-options button {
-  width: 85%;
-  flex-shrink: 0;
-
-  background-color: #dff6fa;
-  color: #176b78;
-
-  border: none;
-  border-radius: 25px;
-
-  padding: 8px 12px;
-
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  text-align: center;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Efecto al pasar el mouse */
-.legal-options button:hover {
-  background-color: #bceaf2;
-  color: #124e59;
-  transform: translateY(-2px);
-}
-
-/* Efecto al presionar */
-.legal-options button:active {
-  transform: scale(0.98);
-}
-
-
-/* ==========================================
-   7. FORMULARIO DEL CHAT
-========================================== */
-
-.legal-form {
-  display: flex;
-  gap: 8px;
-  padding: 12px;
-
-  border-top: 1px solid #ddd;
-  background: white;
-
-  flex-shrink: 0;
-}
-
-.legal-form input {
-  min-width: 0;
-  flex: 1;
-
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-
-  font: inherit;
-  font-size: 13px;
-}
-
-.legal-form input::placeholder {
-  color: #888;
-}
-
-.legal-form button {
-  background: #18283d;
-  color: white;
-
-  border: none;
-  border-radius: 8px;
-
-  padding: 10px 14px;
-  font-size: 13px;
-
-  cursor: pointer;
-}
-
-.legal-form button:hover {
-  background: #2b4666;
-}
-
-
-/* ==========================================
-   8. BOTÓN FLOTANTE PARA ABRIR ATENEA
+   2. BOTÓN ORIGINAL PARA ABRIR
 ========================================== */
 
 .legal-launch {
@@ -269,145 +46,425 @@ main p {
 
   background: #18283d;
   color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px;
+
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================
+   3. VENTANA DE ATENEA
+   COLORES EXCLUSIVOS DEL CHATBOT
+========================================== */
+
+.legal-chat {
+  --vino: #49091c;
+  --vino-claro: #671c32;
+  --plateado: #c0c0c0;
+  --plata-clara: #e9e8eb;
+  --texto-chat: #35232b;
+
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+
+  width: min(380px, calc(100vw - 40px));
+  height: min(560px, calc(100dvh - 100px));
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  border: 1px solid #d5d2d6;
+  border-radius: 16px;
+  box-shadow: 0 15px 60px #18283d33;
+
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Ocultar asistente */
+.legal-chat[hidden] {
+  display: none;
+}
+
+/* ==========================================
+   4. ENCABEZADO DE ATENEA
+========================================== */
+
+.legal-chat .legal-header {
+  background: var(--vino);
+  color: white;
+
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   5. AVATAR PLATEADO
+========================================== */
+
+.legal-chat .legal-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background: var(--vino-claro);
+  color: #e3e4e8;
+  border: 1px solid var(--plateado);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.legal-chat .legal-avatar svg {
+  display: block;
+}
+
+/* ==========================================
+   6. NOMBRE DEL ASISTENTE
+========================================== */
+
+.legal-chat .legal-identity {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.legal-chat .legal-identity strong {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.legal-chat .legal-identity span {
+  color: #e3e4e8;
+  font-size: 11px;
+}
+
+/* ==========================================
+   7. BOTÓN PARA CERRAR ATENEA
+========================================== */
+
+.legal-chat .legal-close {
+  background: transparent;
+  color: white;
+
+  border: 1px solid #b9b6bc;
+  border-radius: 6px;
+  padding: 5px 10px;
+
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.legal-chat .legal-close:hover {
+  background: var(--vino-claro);
+}
+
+/* ==========================================
+   8. AVISO INFORMATIVO
+========================================== */
+
+.legal-chat .legal-notice {
+  padding: 9px 12px;
+  margin: 0;
+
+  background: #f4f2f3;
+  color: #63555c;
+
+  font-size: 11px;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   9. CONTENIDO DEL ASISTENTE
+========================================== */
+
+.legal-chat .legal-content {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 transparent;
+}
+
+/* ==========================================
+   10. HISTORIAL DE MENSAJES
+========================================== */
+
+.legal-chat .legal-log {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+
+  overflow: visible;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   11. MENSAJES DE ATENEA
+========================================== */
+
+.legal-chat .legal-message {
+  margin: 0;
+  padding: 10px 12px;
+
+  border-radius: 12px;
+  background: #f0eff1;
+  color: var(--texto-chat);
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  align-self: flex-start;
+  max-width: 95%;
+}
+
+/* Mensajes del visitante */
+.legal-chat .legal-user {
+  background: var(--vino);
+  color: white;
+
+  align-self: flex-end;
+  max-width: 90%;
+}
+
+/* ==========================================
+   12. CONTENEDOR DE BOTONES DINÁMICOS
+========================================== */
+
+.legal-chat .legal-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  gap: 7px;
+  padding: 5px 0 10px;
+
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   13. BOTONES PEQUEÑOS Y REDONDEADOS
+========================================== */
+
+.legal-chat .legal-options button {
+  width: 85%;
+  min-height: 33px;
+  flex-shrink: 0;
+
+  background: var(--plata-clara);
+  color: var(--vino-claro);
+
+  border: 1px solid #d5d2d6;
+  border-radius: 25px;
+
+  padding: 7px 12px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Efecto hover */
+.legal-chat .legal-options button:hover {
+  background: var(--plateado);
+  color: var(--vino);
+  transform: translateY(-2px);
+}
+
+/* Efecto clic */
+.legal-chat .legal-options button:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================
+   14. FORMULARIO PARA ESCRIBIR
+========================================== */
+
+.legal-chat .legal-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px;
+  border-top: 1px solid #ded9dc;
+
+  background: white;
+  flex-shrink: 0;
+}
+
+.legal-chat .legal-form input {
+  min-width: 0;
+  flex: 1;
+
+  padding: 10px;
+  border: 1px solid #c8c4c7;
+  border-radius: 6px;
+
+  font: inherit;
+  font-size: 12px;
+}
+
+.legal-chat .legal-form input::placeholder {
+  color: #81757b;
+}
+
+/* Botón enviar */
+.legal-chat .legal-form button {
+  background: var(--vino);
+  color: white;
 
   border: none;
   border-radius: 8px;
 
-  padding: 11px 16px;
+  padding: 10px 12px;
 
-  box-shadow: 0 4px 15px #18283d33;
+  font: inherit;
+  font-size: 12px;
   cursor: pointer;
-
-  z-index: 1001;
 }
 
-.legal-launch:hover {
-  background: #2b4666;
+.legal-chat .legal-form button:hover {
+  background: var(--vino-claro);
 }
-
 
 /* ==========================================
-   9. BOTÓN INFERIOR DE WHATSAPP
+   15. WHATSAPP INFERIOR
 ========================================== */
 
-.legal-contact {
+.legal-chat .legal-contact {
   display: block;
 
-  margin: 0 12px 12px;
-  padding: 10px;
+  margin: 0 12px 8px;
+  padding: 9px;
 
   background: #e7f5ec;
   color: #165330;
 
-  text-align: center;
   text-decoration: none;
+  text-align: center;
 
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
 
   flex-shrink: 0;
 }
 
-.legal-contact[hidden] {
+.legal-chat .legal-contact[hidden] {
   display: none;
 }
 
-.legal-contact:hover {
+.legal-chat .legal-contact:hover {
   background: #d0eadb;
 }
 
-
 /* ==========================================
-   10. PIE DEL ASISTENTE
+   16. PIE Y AVISO DE PRIVACIDAD
 ========================================== */
 
 .legal-chat footer {
-  padding: 0 12px 12px;
-  font-size: 11px;
-  line-height: 1.4;
+  padding: 2px 12px 10px;
+  font-size: 10px;
+  text-align: center;
+  color: #81757b;
 
   flex-shrink: 0;
 }
 
-.legal-chat a {
-  color: #165330;
+.legal-chat footer a {
+  color: var(--vino-claro);
 }
 
-
 /* ==========================================
-   11. ACCESIBILIDAD
+   17. ACCESIBILIDAD DEL ASISTENTE
 ========================================== */
 
-:focus-visible {
-  outline: 3px solid #bd8e2e;
+.legal-chat :focus-visible {
+  outline: 3px solid #a9a3aa;
   outline-offset: 2px;
 }
 
-
 /* ==========================================
-   12. ADAPTACIÓN PARA CELULARES
+   18. DISEÑO RESPONSIVO
 ========================================== */
 
 @media (max-width: 480px) {
+
   .legal-chat {
     right: 10px;
     bottom: 70px;
 
     width: calc(100vw - 20px);
-    max-height: calc(100dvh - 85px);
+    height: min(540px, calc(100dvh - 85px));
   }
 
-  .legal-chat header {
-    padding: 12px;
-  }
-
-  .legal-log {
-    max-height: 150px;
-  }
-
-  .legal-options {
-    gap: 6px;
-    padding: 8px 12px;
-  }
-
-  .legal-options button {
+  .legal-chat .legal-options button {
     width: 90%;
-    padding: 8px 10px;
-    font-size: 12px;
-  }
-
-  .legal-launch {
-    right: 10px;
-    bottom: 10px;
   }
 }
 
-/* Pantallas con poca altura */
-@media (max-height: 550px) {
+@media (max-height: 480px) {
+
   .legal-chat {
     bottom: 60px;
-    max-height: calc(100dvh - 70px);
+    height: calc(100dvh - 70px);
   }
 
-  .legal-chat header {
-    padding: 10px 12px;
+  .legal-chat .legal-header {
+    padding: 7px 12px;
   }
 
-  .legal-notice {
-    padding: 7px 10px;
-  }
-
-  .legal-log {
-    max-height: 110px;
-  }
-
-  .legal-options {
+  .legal-chat .legal-notice {
     padding: 6px 10px;
-    gap: 5px;
   }
+}
 
-  .legal-options button {
-    padding: 6px 10px;
+@media (prefers-reduced-motion: reduce) {
+  .legal-chat .legal-options button {
+    transition: none;
   }
 }
 

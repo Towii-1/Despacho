@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Atenea | Asistente Jurídico</title>
+  <title>Asistente del despacho</title>
 
   <!-- Conexión con CSS -->
   <link rel="stylesheet" href="styles.css">
@@ -16,6 +16,7 @@
 
 <body>
 
+  <!-- PÁGINA ORIGINAL: NO MODIFICAR -->
   <main>
     <p class="demo">
       DEMOSTRACIÓN · Sustituye los datos antes de publicar
@@ -30,16 +31,17 @@
     </p>
   </main>
 
-  <!-- Botón para abrir Atenea -->
+  <!-- BOTÓN ORIGINAL: NO MODIFICAR -->
   <button
     id="legal-launch"
     class="legal-launch"
+    type="button"
     aria-controls="legal-chat"
     aria-expanded="false">
     Abrir asistente
   </button>
 
-  <!-- Ventana de Atenea -->
+  <!-- ATENEA: ASISTENTE VIRTUAL -->
   <section
     id="legal-chat"
     class="legal-chat"
@@ -47,48 +49,94 @@
     hidden>
 
     <!-- Encabezado -->
-    <header>
-      <strong id="legal-title">
-        Atenea | Asistente Virtual
-      </strong>
+    <header class="legal-header">
 
+      <!-- Avatar de balanza plateada -->
+      <div class="legal-avatar" aria-hidden="true">
+
+        <svg
+          viewBox="0 0 64 64"
+          width="34"
+          height="34"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+
+          <path d="M32 8V52"/>
+          <path d="M19 56H45"/>
+          <path d="M25 52H39"/>
+          <path d="M11 20H53"/>
+          <path d="M32 12L11 20"/>
+          <path d="M32 12L53 20"/>
+
+          <path d="M12 20L5 39H19L12 20Z"/>
+          <path d="M52 20L45 39H59L52 20Z"/>
+
+          <path d="M5 39Q12 48 19 39"/>
+          <path d="M45 39Q52 48 59 39"/>
+
+          <circle
+            cx="32"
+            cy="9"
+            r="3"
+            fill="currentColor"/>
+        </svg>
+
+      </div>
+
+      <!-- Nombre del asistente -->
+      <div class="legal-identity">
+        <strong id="legal-title">Atenea</strong>
+        <span>Asistente virtual de EYRA LEGAL</span>
+      </div>
+
+      <!-- Cerrar asistente -->
       <button
         id="legal-close"
         class="legal-close"
+        type="button"
         aria-label="Cerrar asistente">
-        ×
+        &times;
       </button>
+
     </header>
 
-    <!-- Aviso de privacidad -->
+    <!-- Aviso informativo -->
     <p class="legal-notice">
       Asistente automatizado de información general.
-      No ofrece asesoría jurídica ni confirma citas.
-      No escribas datos personales, documentos
-      ni detalles confidenciales.
+      No sustituye la asesoría jurídica ni confirma citas.
+      No compartas documentos ni datos confidenciales.
     </p>
 
-    <!-- Historial de conversación -->
-    <div
-      id="legal-log"
-      class="legal-log"
-      role="log"
-      aria-live="polite"
-      aria-label="Conversación">
+    <!-- Conversación y menús -->
+    <div id="legal-content" class="legal-content">
+
+      <!-- Mensajes -->
+      <div
+        id="legal-log"
+        class="legal-log"
+        role="log"
+        aria-live="polite"
+        aria-label="Conversación">
+      </div>
+
+      <!-- Botones dinámicos -->
+      <nav
+        id="legal-options"
+        class="legal-options"
+        aria-label="Opciones de Atenea">
+      </nav>
+
     </div>
 
-    <!-- Botones dinámicos -->
-    <nav
-      id="legal-options"
-      class="legal-options"
-      aria-label="Opciones del asistente">
-    </nav>
-
-    <!-- Campo para escribir preguntas -->
+    <!-- Escribir preguntas -->
     <form id="legal-form" class="legal-form">
 
       <input
         id="legal-input"
+        type="text"
         aria-label="Pregunta para Atenea"
         placeholder="¿En qué puedo orientarte hoy?"
         maxlength="300"
@@ -101,7 +149,7 @@
 
     </form>
 
-    <!-- Contacto por WhatsApp -->
+    <!-- WhatsApp inferior -->
     <a
       id="legal-contact"
       class="legal-contact"
@@ -111,12 +159,11 @@
       Continuar en WhatsApp
     </a>
 
-    <!-- Pie del asistente -->
+    <!-- Aviso de privacidad -->
     <footer id="legal-footer"></footer>
 
   </section>
 
 </body>
 </html>
-
 
