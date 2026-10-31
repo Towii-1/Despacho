@@ -1,35 +1,72 @@
-
-// Componente Header
 function Header() {
+
     return `
         <header class="header">
 
-            <div class="logo">
-                <img src="assets/images/logotipo-h.webp" alt="">
+            <div class="header__logo">
+                <img
+                    src="assets/images/logotipo-h.webp"
+                    alt="Logotipo del despacho"
+                >
             </div>
 
-            <nav class="nav" id="nav">
-                <a href="#inicio">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#contacto">Contacto</a>
+            <nav class="header__nav" id="nav">
+
+                <a href="#inicio" class="header__link">
+                    Inicio
+                </a>
+
+                <a href="#nosotros" class="header__link">
+                    Nosotros
+                </a>
+
+                <a href="#servicios" class="header__link">
+                    Servicios
+                </a>
+
+                <a href="#contacto" class="header__link">
+                    Contacto
+                </a>
+
             </nav>
 
-            <div class="menu-btn" id="menuBtn">
-                ☰
-            </div>
+            <a href="#contacto" class="header__link--private">
+
+                <p>Consulta privada</p>
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M17 7l-10 10" />
+                    <path d="M8 7l9 0l0 9" />
+                </svg>
+
+            </a>
 
         </header>
     `;
 }
 
-// Renderizar componente
 document.getElementById("header").innerHTML = Header();
 
-// Funcionalidad del menú
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
 
-menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
+const nav = document.getElementById("nav");
+const menuBtn = document.getElementById("menuBtn");
+
+if (menuBtn && nav) {
+
+    menuBtn.addEventListener("click", () => {
+
+        nav.classList.toggle("header__nav--active");
+
+    });
+
+}

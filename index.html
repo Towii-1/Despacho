@@ -7,7 +7,8 @@
   <title>Asistente del despacho</title>
 
   <!-- Conexión con CSS -->
-  <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="assets/styles/reset.css">
+  <link rel="stylesheet" href="assets/styles/styles.css">
 
   <!-- Conexión con JavaScript -->
   <script src="script.js" defer></script>
@@ -16,23 +17,31 @@
 
 <body>
   <main>
+    <section class="hero" id="inicio">
 
-    <section class="hero"></section>
+      <div class="hero__background"></div>
 
-    <header id="header"></header>
+      <header class="header" id="header"></header>
 
-    <section class="hero-content">
-      <p class="demo">
-        DEMOSTRACIÓN · Sustituye los datos antes de publicar
-      </p>
+      <div class="hero__content">
+        <div class="hero_center">
+            <p class="hero__demo">
+              DEMOSTRACIÓN · Sustituye los datos antes de publicar
+            </p>
 
-      <h1>Tu despacho de abogados</h1>
+            <h1 class="hero__title">
+                Tu despacho de abogados
+            </h1>
 
-      <p>
-        Atención clara y cercana. Abre el asistente para
-        consultar información del despacho y conocer
-        cómo solicitar una cita.
-      </p>
+            <p class="hero__description">
+                Atención clara y cercana. Abre el asistente para
+                consultar información del despacho y conocer
+                cómo solicitar una cita.
+            </p>
+        </div>
+
+      </div>
+
     </section>
     
   </main>
@@ -132,5 +141,7 @@
 
     <footer id="legal-footer"></footer>
   </section>
+
+
 </body>
 </html>
