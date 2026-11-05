@@ -12,16 +12,17 @@ function Header() {
 
             <nav class="header__nav" id="nav">
 
-                <a href="#inicio" class="header__link">
+                <a href="index.html" class="header__link">
                     Inicio
+                </a>
+
+                
+                <a href="servicios.html" class="header__link">
+                    Servicios
                 </a>
 
                 <a href="#nosotros" class="header__link">
                     Nosotros
-                </a>
-
-                <a href="#servicios" class="header__link">
-                    Servicios
                 </a>
 
                 <a href="#contacto" class="header__link">
