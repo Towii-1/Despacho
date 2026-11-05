@@ -1,39 +1,166 @@
 
-/* ==========================================
-   1. ESTILOS ORIGINALES DE LA PÁGINA
-   NO MODIFICADOS
-========================================== */
 
-* {
-  box-sizing: border-box;
+:root {
+    --primary-color: rgb(60, 0, 15);
+    --secondary-color: #25070f;
+    --tertiary-color: #c7a767;
+
+    --font-subtitles: 
 }
 
-body {
-  margin: 0;
-  font: 16px system-ui, sans-serif;
-  background: #f4f1eb;
-  color: #18283d;
+
+/* =========== HEADER =========== */
+
+.header {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 90px;
+
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+
+    font-size: 1.2rem;
 }
 
-main {
-  max-width: 850px;
-  margin: 12vh auto;
-  padding: 24px;
+/* Elemento: logo */
+
+.header__logo {
+    width: 250px;
 }
 
-h1 {
-  font: clamp(32px, 6vw, 58px) Georgia, serif;
+.header__logo img {
+    display: block;
+    width: 100%;
 }
 
-main p {
-  line-height: 1.7;
-  max-width: 600px;
+/* Elemento: navigation */
+
+.header__nav {
+    display: flex;
+    gap: 2.5rem;
 }
 
-.demo {
-  color: #765b20;
-  font-weight: bold;
+/* Elemento: link */
+
+.header__link {
+    color: rgb(243, 209, 209);
+    text-decoration: none;
+    transition: color .3s ease;
 }
+
+.header__link:hover {
+    color: #00bcd4;
+}
+
+/* Modificador: private */
+
+.header__link--private {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+
+    transition: opacity .3s ease;
+}
+
+.header__link--private:hover {
+    opacity: .8;
+}
+
+
+
+/* =========== HERO =========== */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    height: 100dvh;
+    font-family: ;
+}
+
+/* Elemento: background */
+
+.hero__background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(60, 0, 15, 1),
+            rgba(60, 0, 15, .3)
+        ),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=85&w=1800");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100vh - 90px);
+
+    padding: 2rem;
+    color: white;
+}
+
+.hero_center {
+  width: 85%;
+}
+
+.hero__demo {
+    margin-bottom: 1.5rem;
+    font-size: .8rem;
+    letter-spacing: .1em;
+}
+
+
+.hero__title {
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.hero__description {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* =========== Servicios =========== */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ==========================================
    2. BOTÓN ORIGINAL PARA ABRIR
@@ -467,4 +594,3 @@ main p {
     transition: none;
   }
 }
-

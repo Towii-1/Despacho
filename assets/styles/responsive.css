@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+
+    .header {
+        justify-content: space-between;
+        padding: 0 1.5rem;
+    }
+
+    .header__logo {
+        width: 180px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .hero__content {
+        width: 100%;
+        height: calc(100dvh - 90px);
+    }
+
+}
