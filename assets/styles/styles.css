@@ -167,20 +167,21 @@
 ========================================== */
 
 .legal-launch {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
 
-  background: #18283d;
-  color: white;
-  border: 0;
-  border-radius: 8px;
-  padding: 11px;
+    z-index: 1001;
 
-  font: inherit;
-  cursor: pointer;
+    background: #18283d;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px;
+
+    font: inherit;
+    cursor: pointer;
 }
-
 /* ==========================================
    3. VENTANA DE ATENEA
    COLORES EXCLUSIVOS DEL CHATBOT
