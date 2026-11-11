@@ -3,7 +3,7 @@
 :root {
     --primary-color: rgb(60, 0, 15);
     --secondary-color: #f5f1e9;
-    --tertiary-color: #c7a767;
+    --tertiary-color: #ffc401;
 
     --font-title:'Playfair Display', serif;
     --font-primary: 'Montserrat', sans-serif;
@@ -176,6 +176,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-top: 4rem;
 }
 
 .legal-areas__title {
@@ -184,15 +185,124 @@ body {
   opacity: .7;
 }
 
+.legal-areas__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .8rem;
+    letter-spacing: .1em;
+}
+
 .legal-areas__eyebrow::before {
   content: "";
   display: inline-block;
   width: 40px;
   height: 1px;
-  background-color: yellow;
+  background-color: rgb(154, 78, 40);
 }
 
+.legal-areas__item {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  border-top: 1px solid var(--primary-color);
+  align-items: center;
+  transform: translateY(1);
+  transition: all .3s ease-in-out;
+  padding: 0 2rem;
+}
+
+.legal-areas__item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 10px rgba(60, 0, 15, .3);
+}
+
+.legal-areas__subtitle {
+  font-family: var(--font-primary);
+  size: 3rem;
+  font-weight: bold;
+}
+
+.legal-areas__description {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  size: 1rem;
+}
+
+.legal-areas__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  border-radius: 100%;
+  padding: .3rem;
+  transition: all .4s ease-in-out;
+}
+
+.legal-areas__icon:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+
 /* =========== Servicios =========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

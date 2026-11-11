@@ -21,12 +21,12 @@ function Header() {
                     Servicios
                 </a>
 
-                <a href="#nosotros" class="header__link">
-                    Nosotros
+                <a href="#colaboradores" class="header__link">
+                    Colaboradores
                 </a>
 
-                <a href="#contacto" class="header__link">
-                    Contacto
+                <a href="#nosotros" class="header__link">
+                    Nosotros
                 </a>
 
             </nav>
