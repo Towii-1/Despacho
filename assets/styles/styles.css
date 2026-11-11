@@ -179,6 +179,7 @@ body {
   padding-top: 4rem;
 }
 
+
 .legal-areas__title {
   font-size: clamp(1.7rem, 3.5vw, 3.5rem);
   font-family: var(--font-title);
@@ -215,6 +216,7 @@ body {
   display: flex;
   align-items: center;
   gap: 5rem;
+  width: 100%;
 }
 
 .legal-areas__num {
@@ -224,7 +226,7 @@ body {
 
 .legal-areas__subtitle {
   font-family: var(--font-title);
-    font-size: clamp(1.4rem, 2.8vw, 2.8rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.8rem);
   font-weight: 500;
   opacity: 0.8;
   transform: translate(1);
@@ -240,6 +242,7 @@ body {
   align-items: center;
   gap: 3rem;
   size: 1rem;
+  width: 60%;
 }
 
 .legal-areas__icon {
@@ -260,6 +263,10 @@ body {
   background-color: var(--primary-color);
   color: white;
 }
+
+
+
+
 /* =========== Servicios =========== */
 
 

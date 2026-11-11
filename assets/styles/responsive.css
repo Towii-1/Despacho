@@ -39,5 +39,8 @@
 
     .legal-areas__description {
         gap: 1rem;
+        width: auto;
     }
+
+
 }
