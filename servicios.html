@@ -1,287 +1,416 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <!-- Archivos CSS -->
-    <link rel="stylesheet" href="assets/styles/reset.css">
-    <link rel="stylesheet" href="assets/styles/styles.css">
-
-    <!-- JavaScript del encabezado -->
-    <script src="header.js" type="module"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios Jurídicos | EYRA LEGAL</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <!-- Conexión con JavaScript -->
+    <script src="./header.js" type="module"></script>
+    <div id="header"></div>
 </head>
-
 <body>
 
-    <!-- =====================================
-         HEADER
-    ===================================== -->
+    <!-- ÁREAS DE PRÁCTICA JURÍDICA -->
+    
+    <section class="practicas" id="servicios">
 
-    <header class="header" id="header"></header>
+        <div class="practicas__contenedor">
 
+            <!-- CONTENIDO PRINCIPAL -->
+            <div class="practicas__principal">
 
-    <!-- =====================================
-         CONTENIDO PRINCIPAL
-    ===================================== -->
+                <!-- INFORMACIÓN -->
+                <div class="practicas__informacion">
 
-    <main class="servicios">
+                    <div class="practicas__encabezado">
 
+                        <span class="practicas__etiqueta">
+                            ESPECIALIDADES • JURISDICCIÓN INTEGRAL
+                        </span>
 
-        <!-- INTRODUCCIÓN -->
+                        <span class="practicas__linea"></span>
 
-        <section class="servicios__introduccion">
+                        <span class="practicas__etiqueta">
+                            PRÁCTICA FEDERAL &amp; LOCAL
+                        </span>
 
-            <h1 class="servicios__titulo">
-                Nuestros Servicios Jurídicos
-            </h1>
+                    </div>
 
-            <p class="servicios__descripcion">
-                En EYRA LEGAL ofrecemos servicios jurídicos
-                en diferentes áreas del derecho, brindando
-                orientación profesional, atención personalizada
-                y soluciones adaptadas a las necesidades
-                de cada cliente.
+                    <h1 class="practicas__titulo">
+                        Áreas de Práctica Jurídica
+                    </h1>
 
-                Nuestro compromiso es proporcionar un servicio
-                basado en la confianza, la responsabilidad,
-                la ética y el respeto, buscando proteger
-                los derechos e intereses de quienes depositan
-                su confianza en nosotros.
-            </p>
+                    <p class="practicas__descripcion">
+                        Soluciones legales de alta precisión,
+                        ética intachable y litigio estratégico
+                        en cuatro ramas fundamentales del derecho.
+                    </p>
 
-        </section>
+                </div>
 
+                <!-- ESTADÍSTICAS -->
+                <div class="practicas__estadisticas">
 
-        <!-- =====================================
-             CONTENEDOR DE SERVICIOS
-        ===================================== -->
+                    <div class="practicas__datos">
 
-        <div class="servicios__contenedor">
+                        <div class="practicas__dato">
 
+                            <span class="practicas__cantidad">
+                                +20
+                            </span>
 
-            <!-- DERECHO LABORAL -->
+                            <span class="practicas__detalle">
+                                AÑOS DE EJERCICIO
+                            </span>
 
-            <section class="servicio servicio--laboral">
+                        </div>
 
-                <h2 class="servicio__titulo">
-                    Derecho Laboral
-                </h2>
+                        <div class="practicas__dato">
 
-                <p class="servicio__descripcion">
-                    Atendemos asuntos relacionados con
-                    los derechos y obligaciones de
-                    trabajadores y empleadores.
-                </p>
+                            <span class="practicas__cantidad">
+                                94.6%
+                            </span>
 
-                <h3 class="servicio__subtitulo">
-                    Servicios:
-                </h3>
+                            <span class="practicas__detalle">
+                                LAUDOS Y RESOLUCIONES FAVORABLES
+                            </span>
 
-                <ul class="servicio__lista">
+                        </div>
 
-                    <li class="servicio__item">
-                        Despidos injustificados.
-                    </li>
+                        <div class="practicas__dato">
 
-                    <li class="servicio__item">
-                        Contratos laborales.
-                    </li>
+                            <span class="practicas__cantidad">
+                                2,400+
+                            </span>
 
-                    <li class="servicio__item">
-                        Liquidaciones y finiquitos.
-                    </li>
+                            <span class="practicas__detalle">
+                                DICTÁMENES EMITIDOS
+                            </span>
 
-                    <li class="servicio__item">
-                        Prestaciones laborales.
-                    </li>
+                        </div>
 
-                    <li class="servicio__item">
-                        Conflictos laborales.
-                    </li>
+                    </div>
 
-                </ul>
+                    <!-- VALIDACIÓN -->
+                    <div class="practicas__validacion">
 
-            </section>
+                        <span class="practicas__validacion-texto">
+                            ⚖ Validación Notarial de Conflictos
+                        </span>
 
+                        <span class="practicas__cedula">
+                            CÉDULA FED. 44810
+                        </span>
 
-            <!-- DERECHO MERCANTIL -->
+                    </div>
 
-            <section class="servicio servicio--mercantil">
+                </div>
 
-                <h2 class="servicio__titulo">
-                    Derecho Mercantil
-                </h2>
+            </div>
 
-                <p class="servicio__descripcion">
-                    Brindamos orientación jurídica
-                    relacionada con actividades
-                    comerciales y empresariales.
-                </p>
+            <!-- NAVEGACIÓN -->
+            <nav class="practicas__navegacion"
+                 aria-label="Especialidades jurídicas">
 
-                <h3 class="servicio__subtitulo">
-                    Servicios:
-                </h3>
+                <span class="practicas__navegacion-titulo">
+                    NAVEGAR POR RAMA:
+                </span>
 
-                <ul class="servicio__lista">
+                <div class="practicas__enlaces">
 
-                    <li class="servicio__item">
-                        Contratos mercantiles.
-                    </li>
+                    <a href="#laboral" class="practicas__enlace">
+                        <span class="practicas__icono">⚖</span>
+                        01. LABORAL &amp; SEGURIDAD SOCIAL
+                    </a>
 
-                    <li class="servicio__item">
-                        Asesoría a empresas.
-                    </li>
+                    <a href="#familiar" class="practicas__enlace">
+                        <span class="practicas__icono">♟</span>
+                        02. FAMILIAR &amp; SUCESIONES
+                    </a>
 
-                    <li class="servicio__item">
-                        Cobranza de adeudos.
-                    </li>
+                    <a href="#penal" class="practicas__enlace">
+                        <span class="practicas__icono">⚒</span>
+                        03. PENAL &amp; LITIGIO ESTRATÉGICO
+                    </a>
 
-                    <li class="servicio__item">
-                        Conflictos comerciales.
-                    </li>
+                    <a href="#mercantil" class="practicas__enlace">
+                        <span class="practicas__icono">♜</span>
+                        04. MERCANTIL &amp; CORPORATIVO
+                    </a>
 
-                    <li class="servicio__item">
-                        Procedimientos mercantiles.
-                    </li>
+                </div>
 
-                </ul>
-
-            </section>
-
-
-            <!-- DERECHO FAMILIAR -->
-
-            <section class="servicio servicio--familiar">
-
-                <h2 class="servicio__titulo">
-                    Derecho Familiar
-                </h2>
-
-                <p class="servicio__descripcion">
-                    Ofrecemos orientación en asuntos
-                    relacionados con las relaciones
-                    familiares y sus derechos.
-                </p>
-
-                <h3 class="servicio__subtitulo">
-                    Servicios:
-                </h3>
-
-                <ul class="servicio__lista">
-
-                    <li class="servicio__item">
-                        Divorcios.
-                    </li>
-
-                    <li class="servicio__item">
-                        Pensiones alimenticias.
-                    </li>
-
-                    <li class="servicio__item">
-                        Guarda y custodia.
-                    </li>
-
-                    <li class="servicio__item">
-                        Régimen de convivencias.
-                    </li>
-
-                    <li class="servicio__item">
-                        Conflictos familiares.
-                    </li>
-
-                </ul>
-
-            </section>
-
-
-            <!-- DERECHO PENAL -->
-
-            <section class="servicio servicio--penal">
-
-                <h2 class="servicio__titulo">
-                    Derecho Penal
-                </h2>
-
-                <p class="servicio__descripcion">
-                    Proporcionamos atención jurídica
-                    relacionada con delitos,
-                    denuncias y procedimientos penales.
-                </p>
-
-                <h3 class="servicio__subtitulo">
-                    Servicios:
-                </h3>
-
-                <ul class="servicio__lista">
-
-                    <li class="servicio__item">
-                        Asesoría jurídica penal.
-                    </li>
-
-                    <li class="servicio__item">
-                        Presentación de denuncias.
-                    </li>
-
-                    <li class="servicio__item">
-                        Defensa penal.
-                    </li>
-
-                    <li class="servicio__item">
-                        Representación de víctimas.
-                    </li>
-
-                    <li class="servicio__item">
-                        Orientación en procesos penales.
-                    </li>
-
-                </ul>
-
-            </section>
+            </nav>
 
         </div>
 
-    </main>
+    </section>
 
 
-    <!-- =====================================
-         FOOTER
-    ===================================== -->
+    <!-- ==========================================
+         EYRA LEGAL - DERECHO LABORAL
+         METODOLOGÍA BEM
+    ========================================== -->
 
-    <footer class="footer">
+    <section class="laboral" id="laboral">
 
-        <div class="footer__contenido">
+        <div class="laboral__contenedor">
 
-            <p class="footer__nombre">
-                EYRA LEGAL | Despacho Jurídico
-            </p>
+            <!-- ENCABEZADO -->
+            <div class="laboral__encabezado">
 
-            <p class="footer__ubicacion">
-                Universidad Lucerna
-            </p>
+                <span class="laboral__etiqueta">
+                    01 · ÁREA LABORAL
+                </span>
 
-            <div class="footer__horarios">
+                <h2 class="laboral__titulo">
+                    Derecho Laboral
+                </h2>
 
-                <p class="footer__horario">
-                    Lunes a viernes:
-                    9:00 a. m. - 6:00 p. m.
+                <p class="laboral__descripcion">
+                    Brindamos asesoría y representación legal
+                    a trabajadores y empresas, protegiendo
+                    sus derechos y resolviendo conflictos laborales.
                 </p>
 
-                <p class="footer__horario">
-                    Sábados:
-                    9:00 a. m. - 2:00 p. m.
-                </p>
+            </div>
+
+            <!-- SERVICIOS LABORALES -->
+            <div class="laboral__servicios">
+
+                <!-- SERVICIO 1 -->
+                <article class="laboral__tarjeta">
+
+                    <div class="laboral__icono">
+                        <span aria-hidden="true">▤</span>
+                    </div>
+
+                    <h3 class="laboral__subtitulo">
+                        Contratos Laborales
+                    </h3>
+
+                    <p class="laboral__texto">
+                        Elaboración y revisión de contratos
+                        individuales y colectivos de trabajo.
+                    </p>
+
+                </article>
+
+                <!-- SERVICIO 2 -->
+                <article class="laboral__tarjeta">
+
+                    <div class="laboral__icono">
+                        <span aria-hidden="true">⚖</span>
+                    </div>
+
+                    <h3 class="laboral__subtitulo">
+                        Despidos y Demandas
+                    </h3>
+
+                    <p class="laboral__texto">
+                        Defensa legal y resolución de
+                        conflictos derivados de despidos.
+                    </p>
+
+                </article>
+
+                <!-- SERVICIO 3 -->
+                <article class="laboral__tarjeta">
+
+                    <div class="laboral__icono">
+                        <span aria-hidden="true">▣</span>
+                    </div>
+
+                    <h3 class="laboral__subtitulo">
+                        Asesoría Empresarial
+                    </h3>
+
+                    <p class="laboral__texto">
+                        Orientación para el cumplimiento
+                        de obligaciones y normas laborales.
+                    </p>
+
+                </article>
+
+                <!-- SERVICIO 4 -->
+                <article class="laboral__tarjeta">
+
+                    <div class="laboral__icono">
+                        <span aria-hidden="true">✧</span>
+                    </div>
+
+                    <h3 class="laboral__subtitulo">
+                        Prestaciones y Seguridad Social
+                    </h3>
+
+                    <p class="laboral__texto">
+                        Asesoría sobre finiquitos,
+                        liquidaciones, pensiones y prestaciones.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <!-- CONTACTO -->
+            <div class="laboral__contacto">
+
+                <div class="laboral__contacto-informacion">
+
+                    <h3 class="laboral__contacto-titulo">
+                        ¿Necesitas asesoría laboral?
+                    </h3>
+
+                    <p class="laboral__contacto-texto">
+                        Contacta a nuestros especialistas jurídicos.
+                    </p>
+
+                </div>
+
+                <a href="#contacto" class="laboral__boton">
+                    Solicitar asesoría
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </div>
 
         </div>
 
-    </footer>
+    </section>
+    
+<!-- ==========================================
+     EYRA LEGAL - DERECHO FAMILIAR
+     METODOLOGÍA BEM
+========================================== -->
+
+<section class="familiar" id="familiar">
+
+    <div class="familiar__contenedor">
+
+        <!-- ENCABEZADO -->
+        <div class="familiar__encabezado">
+
+            <span class="familiar__etiqueta">
+                02 · ÁREA FAMILIAR
+            </span>
+
+            <h2 class="familiar__titulo">
+                Derecho Familiar
+            </h2>
+
+            <p class="familiar__descripcion">
+                Brindamos asesoría legal en asuntos familiares,
+                protegiendo los derechos y el patrimonio
+                de nuestros clientes.
+            </p>
+
+        </div>
+
+        <!-- SERVICIOS FAMILIARES -->
+        <div class="familiar__servicios">
+
+            <!-- SERVICIO 1 -->
+            <article class="familiar__tarjeta">
+
+                <div class="familiar__icono">
+                    <span aria-hidden="true">♡</span>
+                </div>
+
+                <h3 class="familiar__subtitulo">
+                    Divorcios y Separación
+                </h3>
+
+                <p class="familiar__texto">
+                    Asesoría en divorcios, acuerdos
+                    y separación de bienes.
+                </p>
+
+            </article>
+
+            <!-- SERVICIO 2 -->
+            <article class="familiar__tarjeta">
+
+                <div class="familiar__icono">
+                    <span aria-hidden="true">♧</span>
+                </div>
+
+                <h3 class="familiar__subtitulo">
+                    Guarda y Custodia
+                </h3>
+
+                <p class="familiar__texto">
+                    Protección de menores, convivencia
+                    y derechos familiares.
+                </p>
+
+            </article>
+
+            <!-- SERVICIO 3 -->
+            <article class="familiar__tarjeta">
+
+                <div class="familiar__icono">
+                    <span aria-hidden="true">⚖</span>
+                </div>
+
+                <h3 class="familiar__subtitulo">
+                    Pensión Alimenticia
+                </h3>
+
+                <p class="familiar__texto">
+                    Orientación sobre pensiones,
+                    cumplimiento y modificaciones.
+                </p>
+
+            </article>
+
+            <!-- SERVICIO 4 -->
+            <article class="familiar__tarjeta">
+
+                <div class="familiar__icono">
+                    <span aria-hidden="true">▤</span>
+                </div>
+
+                <h3 class="familiar__subtitulo">
+                    Herencias y Sucesiones
+                </h3>
+
+                <p class="familiar__texto">
+                    Asesoría en testamentos, herencias
+                    y distribución patrimonial.
+                </p>
+
+            </article>
+
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="familiar__contacto">
+
+            <div class="familiar__contacto-informacion">
+
+                <h3 class="familiar__contacto-titulo">
+                    ¿Necesitas asesoría familiar?
+                </h3>
+
+                <p class="familiar__contacto-texto">
+                    Recibe atención jurídica personalizada
+                    y confidencial.
+                </p>
+
+            </div>
+
+            <a href="#contacto" class="familiar__boton">
+                Solicitar asesoría
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 </body>
 </html>
