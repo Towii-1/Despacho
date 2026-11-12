@@ -3,7 +3,7 @@
 :root {
     --primary-color: rgb(60, 0, 15);
     --secondary-color: #f5f1e9;
-    --tertiary-color: #ffc401;
+    --tertiary-color: #808080;
 
     --font-title:'Playfair Display', serif;
     --font-primary: 'Montserrat', sans-serif;
@@ -125,7 +125,7 @@ body {
     color: white;
 }
 
-.legal-hero__inner, .legal-areas__inner {
+.legal-hero__inner, .legal-areas__inner, .legal-about__inner {
     display: flex;
     flex-direction: column;
 
@@ -179,13 +179,13 @@ body {
   padding-top: 4rem;
 }
 
+
 .legal-areas__title {
   font-size: clamp(1.7rem, 3.5vw, 3.5rem);
   font-family: var(--font-title);
-  opacity: .7;
 }
 
-.legal-areas__eyebrow {
+.legal-areas__eyebrow, .legal-about__eyebrow {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -193,41 +193,56 @@ body {
     letter-spacing: .1em;
 }
 
-.legal-areas__eyebrow::before {
+.legal-areas__eyebrow::before, .legal-about__eyebrow::before {
   content: "";
   display: inline-block;
   width: 40px;
   height: 1px;
-  background-color: rgb(154, 78, 40);
+  background-color: var(--tertiary-color);
 }
 
 .legal-areas__item {
   display: flex;
   justify-content: space-between;
-  height: 5rem;
+  height: auto;
+  gap: 1rem;
   border-top: 1px solid var(--primary-color);
   align-items: center;
   transform: translateY(1);
-  transition: all .3s ease-in-out;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
 }
 
-.legal-areas__item:hover{
-  transform: translateY(-2px);
-  box-shadow: 0px 0px 10px rgba(60, 0, 15, .3);
+.legal-areas__heading {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+.legal-areas__num {
+  font-size: .8rem;
+  opacity: .6;
 }
 
 .legal-areas__subtitle {
-  font-family: var(--font-primary);
-  size: 3rem;
-  font-weight: bold;
+  font-family: var(--font-title);
+  font-size: clamp(1.4rem, 2.8vw, 2.8rem);
+  font-weight: 500;
+  opacity: 0.8;
+  transform: translate(1);
+  transition: all .3s ease-in-out;
+}
+
+.legal-areas__item:hover .legal-areas__subtitle {
+  transform: translate(5px);
 }
 
 .legal-areas__description {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
   size: 1rem;
+  width: 60%;
 }
 
 .legal-areas__icon {
@@ -237,13 +252,30 @@ body {
   color: var(--primary-color);
   border-radius: 100%;
   padding: .3rem;
-  transition: all .4s ease-in-out;
+  width: 40px;
+  height: 40px;
+  stroke-width: 1;
+  border: 1px solid var(--primary-color);
+  transition: all .3s ease-in-out;
 }
 
-.legal-areas__icon:hover {
+.legal-areas__item:hover .legal-areas__icon {
   background-color: var(--primary-color);
   color: white;
 }
+
+/*  LEGAL ABOUT  */
+
+.legal-about {
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  color: white;
+}
+
+
 
 
 /* =========== Servicios =========== */

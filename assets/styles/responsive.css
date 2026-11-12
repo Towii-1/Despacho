@@ -19,3 +19,28 @@
     }
 
 }
+
+
+@media (max-width: 640px){
+
+    /* ========================================
+    HOME
+    ======================================== */
+
+    /* Legal Areas */
+    .legal-areas__item {
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .legal-areas__heading {
+        gap: 2rem;
+    }
+
+    .legal-areas__description {
+        gap: 1rem;
+        width: auto;
+    }
+
+
+}
