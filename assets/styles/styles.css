@@ -278,6 +278,7 @@ body {
 .legal-about__title {
   font-size: clamp(1.7rem, 3.5vw, 3.5rem);
   font-family: var(--font-title);
+  font-weight: 500;
 }
 
 .legal-about__highlight {
@@ -291,12 +292,66 @@ body {
     border-top: 1px solid #e3b265;
     justify-content: space-between;
     padding: 2rem 0;
-    line-height: 1.7;
-    gap: 2rem;
+    line-height: 2;
     color: var(--secondary-color);
-
+    gap: 4rem;
 }
 
+.legal-about__description {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.legal-about__container-link {
+    display: flex;
+    justify-content: end;
+}
+
+.legal-about__link {
+    display: flex;
+    position: relative;
+    font-weight: 600;
+    gap: .5rem;
+    align-items: center;
+    padding-bottom: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.legal-about__link::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    background-color: white;
+    transform: translateX(0);
+    transition: all .3s ease-in-out;
+}
+
+.legal-about__link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    stroke-width: 8;
+    size: 4rem;
+    transform: translateX(0);
+    transition: all .3s ease-in-out;
+}
+
+.legal-about__link:hover::after, 
+.legal-about__link:hover .legal-about__link-icon{
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+.legal-about__icon {
+    stroke-width: 2;
+}
 
 /* =========== Servicios =========== */
 
