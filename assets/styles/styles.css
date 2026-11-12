@@ -248,11 +248,28 @@ body {
 
 /* =========== Servicios =========== */
 
-
 /* ==========================================
    EYRA LEGAL - SERVICIOS JURÍDICOS
    METODOLOGÍA BEM
 ========================================== */
+
+/* COLORES Y ESTILOS GENERALES */
+
+.practicas,
+.laboral,
+.familiar,
+.penal,
+.mercantil {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.practicas *,
+.laboral *,
+.familiar *,
+.penal *,
+.mercantil * {
+    box-sizing: border-box;
+}
 
 /* ==========================================
    1. ÁREAS DE PRÁCTICA JURÍDICA
@@ -261,12 +278,6 @@ body {
 .practicas {
     padding: 40px 0;
     background: #f8f3f4;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.practicas *,
-.laboral * {
-    box-sizing: border-box;
 }
 
 .practicas__contenedor {
@@ -277,7 +288,7 @@ body {
 
 .practicas__principal {
     display: grid;
-    grid-template-columns: 1.45fr 1fr;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 1fr);
     align-items: center;
     gap: 35px;
 }
@@ -309,6 +320,7 @@ body {
     color: #490519;
     font: 500 clamp(31px, 3.5vw, 46px) Georgia, serif;
     letter-spacing: -1.5px;
+    line-height: 1.15;
 }
 
 .practicas__descripcion {
@@ -330,7 +342,7 @@ body {
 
 .practicas__datos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-bottom: 12px;
 }
 
@@ -407,7 +419,7 @@ body {
     font-size: 10px;
     font-weight: 700;
     text-decoration: none;
-    transition: .3s;
+    transition: background .3s, color .3s;
 }
 
 .practicas__icono {
@@ -430,25 +442,45 @@ body {
 }
 
 /* ==========================================
-   2. DERECHO LABORAL
+   2. ESPECIALIDADES JURÍDICAS
+   LABORAL - FAMILIAR - PENAL - MERCANTIL
 ========================================== */
 
-.laboral {
+/* BLOQUES PRINCIPALES */
+
+.laboral,
+.familiar,
+.penal,
+.mercantil {
     padding: 65px 25px;
     background: #faf5f6;
-    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.laboral__contenedor {
+/* CONTENEDORES */
+
+.laboral__contenedor,
+.familiar__contenedor,
+.penal__contenedor,
+.mercantil__contenedor {
     max-width: 1100px;
     margin: auto;
 }
 
-.laboral__encabezado {
+/* ENCABEZADOS */
+
+.laboral__encabezado,
+.familiar__encabezado,
+.penal__encabezado,
+.mercantil__encabezado {
     margin-bottom: 32px;
 }
 
-.laboral__etiqueta {
+/* ETIQUETAS */
+
+.laboral__etiqueta,
+.familiar__etiqueta,
+.penal__etiqueta,
+.mercantil__etiqueta {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 14px;
@@ -460,13 +492,29 @@ body {
     letter-spacing: 1px;
 }
 
-.laboral__titulo {
+/* COLOR ESPECIAL PARA FAMILIAR */
+
+.familiar__etiqueta {
+    background: #694c27;
+}
+
+/* TÍTULOS */
+
+.laboral__titulo,
+.familiar__titulo,
+.penal__titulo,
+.mercantil__titulo {
     margin: 0 0 12px;
     color: #480b1f;
     font: 500 38px Georgia, serif;
 }
 
-.laboral__descripcion {
+/* DESCRIPCIONES */
+
+.laboral__descripcion,
+.familiar__descripcion,
+.penal__descripcion,
+.mercantil__descripcion {
     max-width: 750px;
     margin: 0;
     color: #76515b;
@@ -474,29 +522,51 @@ body {
     line-height: 1.8;
 }
 
-/* TARJETAS */
+/* ==========================================
+   3. TARJETAS DE SERVICIOS
+========================================== */
 
-.laboral__servicios {
+/* CUADRÍCULAS */
+
+.laboral__servicios,
+.familiar__servicios,
+.penal__servicios,
+.mercantil__servicios {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     margin-bottom: 30px;
 }
 
-.laboral__tarjeta {
+/* TARJETAS */
+
+.laboral__tarjeta,
+.familiar__tarjeta,
+.penal__tarjeta,
+.mercantil__tarjeta {
     padding: 25px;
     background: #fff;
     border: 1px solid #eadce1;
     border-radius: 7px;
-    transition: .3s;
+    transition: transform .3s, box-shadow .3s;
 }
 
-.laboral__tarjeta:hover {
+/* EFECTO HOVER */
+
+.laboral__tarjeta:hover,
+.familiar__tarjeta:hover,
+.penal__tarjeta:hover,
+.mercantil__tarjeta:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px #480b1f14;
 }
 
-.laboral__icono {
+/* ICONOS */
+
+.laboral__icono,
+.familiar__icono,
+.penal__icono,
+.mercantil__icono {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -509,22 +579,38 @@ body {
     font-size: 22px;
 }
 
-.laboral__subtitulo {
+/* SUBTÍTULOS */
+
+.laboral__subtitulo,
+.familiar__subtitulo,
+.penal__subtitulo,
+.mercantil__subtitulo {
     margin: 0 0 9px;
     color: #490c23;
     font-size: 17px;
+    font-weight: 600;
 }
 
-.laboral__texto {
+/* TEXTOS */
+
+.laboral__texto,
+.familiar__texto,
+.penal__texto,
+.mercantil__texto {
     margin: 0;
     color: #745b63;
     font-size: 14px;
     line-height: 1.7;
 }
 
-/* CONTACTO */
+/* ==========================================
+   4. CONTACTO
+========================================== */
 
-.laboral__contacto {
+.laboral__contacto,
+.familiar__contacto,
+.penal__contacto,
+.mercantil__contacto {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -534,23 +620,43 @@ body {
     border-radius: 7px;
 }
 
-.laboral__contacto-informacion {
+.laboral__contacto-informacion,
+.familiar__contacto-informacion,
+.penal__contacto-informacion,
+.mercantil__contacto-informacion {
     flex: 1;
 }
 
-.laboral__contacto-titulo {
+/* TÍTULOS DE CONTACTO */
+
+.laboral__contacto-titulo,
+.familiar__contacto-titulo,
+.penal__contacto-titulo,
+.mercantil__contacto-titulo {
     margin: 0 0 7px;
     color: #fff;
     font-size: 18px;
+    font-weight: 600;
 }
 
-.laboral__contacto-texto {
+/* TEXTOS DE CONTACTO */
+
+.laboral__contacto-texto,
+.familiar__contacto-texto,
+.penal__contacto-texto,
+.mercantil__contacto-texto {
     margin: 0;
     color: #efdce2;
     font-size: 13px;
+    line-height: 1.5;
 }
 
-.laboral__boton {
+/* BOTONES */
+
+.laboral__boton,
+.familiar__boton,
+.penal__boton,
+.mercantil__boton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -562,21 +668,33 @@ body {
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
-    transition: .3s;
+    transition: background .3s;
 }
 
-.laboral__boton:hover {
+/* HOVER DE BOTONES */
+
+.laboral__boton:hover,
+.familiar__boton:hover,
+.penal__boton:hover,
+.mercantil__boton:hover {
     background: #f2dfe5;
 }
 
-.laboral__boton:focus-visible {
+/* ACCESIBILIDAD */
+
+.laboral__boton:focus-visible,
+.familiar__boton:focus-visible,
+.penal__boton:focus-visible,
+.mercantil__boton:focus-visible {
     outline: 3px solid #d4a6b5;
     outline-offset: 3px;
 }
 
 /* ==========================================
-   3. DISEÑO RESPONSIVO
+   5. DISEÑO RESPONSIVO
 ========================================== */
+
+/* TABLET */
 
 @media (max-width: 900px) {
 
@@ -593,10 +711,38 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+/* CELULAR Y TABLET PEQUEÑA */
 
-    .practicas,
-    .laboral {
+@media (max-width: 768px) {
+
+    .laboral,
+    .familiar,
+    .penal,
+    .mercantil {
+        padding: 45px 20px;
+    }
+
+    .laboral__titulo,
+    .familiar__titulo,
+    .penal__titulo,
+    .mercantil__titulo {
+        font-size: 32px;
+    }
+
+    .laboral__contacto,
+    .familiar__contacto,
+    .penal__contacto,
+    .mercantil__contacto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+
+    .practicas {
         padding: 35px 20px;
     }
 
@@ -604,16 +750,11 @@ body {
         width: 100%;
     }
 
-    .practicas__titulo,
-    .laboral__titulo {
+    .practicas__titulo {
         font-size: 30px;
     }
 
-    .practicas__navegacion {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
+    .practicas__navegacion,
     .practicas__enlaces {
         flex-direction: column;
         align-items: stretch;
@@ -623,296 +764,42 @@ body {
         padding: 10px;
     }
 
-    .laboral__servicios {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .laboral__tarjeta {
-        padding: 20px;
-    }
-
-    .laboral__contacto {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 22px;
-    }
-
-    .laboral__boton {
-        width: 100%;
-    }
-}
-
-/* ==========================================
-   EYRA LEGAL - DERECHO FAMILIAR
-   METODOLOGÍA BEM
-========================================== */
-
-/* BLOQUE PRINCIPAL */
-
-.familiar {
-    padding: 65px 25px;
-    background: #faf5f6;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.familiar * {
-    box-sizing: border-box;
-}
-
-/* CONTENEDOR */
-
-.familiar__contenedor {
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* ENCABEZADO */
-
-.familiar__encabezado {
-    margin-bottom: 32px;
-}
-
-.familiar__etiqueta {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 14px;
-    background: #694c27;
-    color: #fff;
-    border-radius: 3px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.familiar__titulo {
-    margin: 0 0 12px;
-    color: #480b1f;
-    font: 500 38px Georgia, serif;
-}
-
-.familiar__descripcion {
-    max-width: 750px;
-    margin: 0;
-    color: #76515b;
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-/* TARJETAS */
-
-.familiar__servicios {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.familiar__tarjeta {
-    padding: 25px;
-    background: #fff;
-    border: 1px solid #eadce1;
-    border-radius: 7px;
-    transition: transform .3s, box-shadow .3s;
-}
-
-.familiar__tarjeta:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px #480b1f14;
-}
-
-/* ICONOS */
-
-.familiar__icono {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    margin-bottom: 15px;
-    background: #f6edf0;
-    color: #681c37;
-    border-radius: 6px;
-    font-size: 22px;
-}
-
-/* INFORMACIÓN DE TARJETAS */
-
-.familiar__subtitulo {
-    margin: 0 0 9px;
-    color: #490c23;
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.familiar__texto {
-    margin: 0;
-    color: #745b63;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* CONTACTO */
-
-.familiar__contacto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    padding: 25px 30px;
-    background: #581126;
-    border-radius: 7px;
-}
-
-.familiar__contacto-informacion {
-    flex: 1;
-}
-
-.familiar__contacto-titulo {
-    margin: 0 0 7px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.familiar__contacto-texto {
-    margin: 0;
-    color: #efdce2;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-/* BOTÓN */
-
-.familiar__boton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 12px 20px;
-    background: #fff;
-    color: #581126;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background .3s;
-}
-
-.familiar__boton:hover {
-    background: #f2dfe5;
-}
-
-.familiar__boton:focus-visible {
-    outline: 3px solid #d4a6b5;
-    outline-offset: 3px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-    .familiar {
-        padding: 45px 20px;
-    }
-
-    .familiar__titulo {
-        font-size: 32px;
-    }
-
-    .familiar__servicios {
-        gap: 15px;
-    }
-
-    .familiar__contacto {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 550px) {
-
-    .familiar__titulo {
+    .laboral__titulo,
+    .familiar__titulo,
+    .penal__titulo,
+    .mercantil__titulo {
         font-size: 29px;
     }
 
-    .familiar__servicios {
+    .laboral__servicios,
+    .familiar__servicios,
+    .penal__servicios,
+    .mercantil__servicios {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .familiar__tarjeta {
+    .laboral__tarjeta,
+    .familiar__tarjeta,
+    .penal__tarjeta,
+    .mercantil__tarjeta {
         padding: 20px;
     }
 
-    .familiar__contacto {
+    .laboral__contacto,
+    .familiar__contacto,
+    .penal__contacto,
+    .mercantil__contacto {
         padding: 22px;
     }
 
-    .familiar__boton {
+    .laboral__boton,
+    .familiar__boton,
+    .penal__boton,
+    .mercantil__boton {
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
