@@ -271,21 +271,35 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 4rem;
+  padding: 4rem 0;
   color: white;
 }
 
+.legal-about__title {
+  font-size: clamp(1.7rem, 3.5vw, 3.5rem);
+  font-family: var(--font-title);
+}
 
+.legal-about__highlight {
+    font-family: var(--font-title);
+    font-style: italic;
+    color: #d7a4ae
+}
+
+.legal-about__content {
+    display: flex;
+    border-top: 1px solid #e3b265;
+    justify-content: space-between;
+    padding: 2rem 0;
+    line-height: 1.7;
+    gap: 2rem;
+    color: var(--secondary-color);
+
+}
 
 
 /* =========== Servicios =========== */
 
-/* ==========================================
-   EYRA LEGAL - SERVICIOS JURÍDICOS
-   METODOLOGÍA BEM
-========================================== */
-
-/* COLORES Y ESTILOS GENERALES */
 
 .practicas,
 .laboral,
@@ -303,9 +317,6 @@ body {
     box-sizing: border-box;
 }
 
-/* ==========================================
-   1. ÁREAS DE PRÁCTICA JURÍDICA
-========================================== */
 
 .practicas {
     padding: 40px 0;
