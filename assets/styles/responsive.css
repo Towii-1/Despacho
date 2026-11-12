@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 1024PX) {
 
     .header {
         justify-content: space-between;
@@ -17,11 +17,6 @@
         width: 100%;
         height: calc(100dvh - 90px);
     }
-
-}
-
-
-@media (max-width: 640px){
 
     /* ========================================
     HOME
@@ -42,5 +37,19 @@
         width: auto;
     }
 
+    /* LEGAL ABOUT */
+    .legal-about__content {
+        gap: 2rem;
+    }
 
+    .legal-about__content {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 640px){
+
+    
 }
