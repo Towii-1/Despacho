@@ -21,7 +21,7 @@ function Header() {
                     Servicios
                 </a>
 
-                <a href="#colaboradores" class="header__link">
+                <a href="colaboradores.html" class="header__link">
                     Colaboradores
                 </a>
 
