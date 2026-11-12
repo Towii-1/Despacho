@@ -176,7 +176,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 4rem;
+  padding: 4rem 0;
 }
 
 
@@ -292,7 +292,7 @@ body {
 .familiar,
 .penal,
 .mercantil {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font-titles);
 }
 
 .practicas *,
