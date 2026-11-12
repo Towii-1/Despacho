@@ -125,7 +125,7 @@ body {
     color: white;
 }
 
-.legal-hero__inner, .legal-areas__inner {
+.legal-hero__inner, .legal-areas__inner, .legal-about__inner {
     display: flex;
     flex-direction: column;
 
@@ -185,7 +185,7 @@ body {
   font-family: var(--font-title);
 }
 
-.legal-areas__eyebrow {
+.legal-areas__eyebrow, .legal-about__eyebrow {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -193,7 +193,7 @@ body {
     letter-spacing: .1em;
 }
 
-.legal-areas__eyebrow::before {
+.legal-areas__eyebrow::before, .legal-about__eyebrow::before {
   content: "";
   display: inline-block;
   width: 40px;
@@ -261,6 +261,17 @@ body {
 
 .legal-areas__item:hover .legal-areas__icon {
   background-color: var(--primary-color);
+  color: white;
+}
+
+/*  LEGAL ABOUT  */
+
+.legal-about {
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
   color: white;
 }
 
