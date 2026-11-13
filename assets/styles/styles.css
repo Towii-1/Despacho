@@ -3,7 +3,7 @@
 :root {
     --primary-color: rgb(60, 0, 15);
     --secondary-color: #f5f1e9;
-    --tertiary-color: #808080;
+    --tertiary-color: #e6d157;
 
     --font-title:'Playfair Display', serif;
     --font-primary: 'Montserrat', sans-serif;
@@ -150,16 +150,19 @@ body {
     width: 40px;
     height: 1px;
 
-    background-color: yellow;
+    background-color: var(--tertiary-color);
 }
 
 .legal-hero__title {
     font-family: var(--font-title);
-    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.2;
+    font-weight: 500;
 }
 
 .legal-hero__highlight {
-    color: #d7a4ae;
+    color: var(--tertiary-color);
+    font-style: italic;
 }
 
 .legal-hero__description {
