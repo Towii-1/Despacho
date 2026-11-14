@@ -164,6 +164,47 @@ body {
     font-size: clamp(1rem, 1vw , 1.125rem);
 }
 
+.legal-hero__container-link {
+    display: flex;
+    justify-content: end;
+    padding: 1.5rem 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        opacity: .6;
+        right: 0;
+        top: 0;
+    }
+}
+
+.legal-hero__link {
+    display: flex;
+    padding: .7rem 1.4rem;
+    gap: 1.5rem;
+    background-color: #edcc81;
+    color: var(--primary-color);
+    border-radius: .3rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: #f6db9d;
+
+        .legal-hero__arrow-link {
+            transform: translateX(6px);
+        }
+    }
+}
+
+.legal-hero__arrow-link {
+    transition: all .3s ease-in-out;
+    transform: translateX(0);
+}
+
 /* LEGAL AREAS */
 
 .legal-areas {
