@@ -117,10 +117,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     min-height: calc(100vh - 80px);
-    min-height: calc(100dvh - 80px);
-
     padding: 2rem;
     color: white;
 }
@@ -144,20 +141,17 @@ body {
 
 .legal-hero__eyebrow::before {
     content: "";
-
     display: inline-block;
-
     width: 40px;
     height: 1px;
-
     background-color: var(--tertiary-color);
 }
 
 .legal-hero__title, .legal-about__title {
     font-family: var(--font-title);
     font-size: clamp(2rem, 4vw, 4rem);
-    line-height: 1.2;
     font-weight: 500;
+    line-height: 1.2;
 }
 
 .legal-hero__highlight {
@@ -167,9 +161,7 @@ body {
 
 .legal-hero__description {
     max-width: 600px;
-
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: clamp(1rem, 1vw , 1.125rem);
 }
 
 /* LEGAL AREAS */
