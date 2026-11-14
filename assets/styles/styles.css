@@ -153,7 +153,7 @@ body {
     background-color: var(--tertiary-color);
 }
 
-.legal-hero__title {
+.legal-hero__title, .legal-about__title {
     font-family: var(--font-title);
     font-size: clamp(2rem, 4vw, 4rem);
     line-height: 1.2;
@@ -293,7 +293,7 @@ body {
 .legal-about__highlight {
     font-family: var(--font-title);
     font-style: italic;
-    color: #d7a4ae
+    color: #d7a4ae;
 }
 
 .legal-about__content {
@@ -301,7 +301,6 @@ body {
     border-top: 1px solid #e3b265;
     justify-content: space-between;
     padding: 2rem 0;
-    line-height: 2;
     color: var(--secondary-color);
     gap: 4rem;
 }
@@ -309,6 +308,7 @@ body {
 .legal-about__description {
     display: flex;
     flex-basis: 50%;
+    font-size: clamp(1rem, 1vw , 1.125rem);
 }
 
 .legal-about__container-link {
