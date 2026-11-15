@@ -1,5 +1,3 @@
-
-
 :root {
     --primary-color: rgb(60, 0, 15);
     --secondary-color: #f5f1e9;
@@ -11,31 +9,36 @@
 
 body {
   font-family: var(--font-primary);
-  font-weight: 500;
 }
 
 
-/* =========== HEADER =========== */
+/* ========================================
+  HEADER
+======================================== */
 
 .header {
     position: relative;
     z-index: 2;
-
     display: flex;
     align-items: center;
-    justify-content: space-around;
-
     width: 100%;
-    height: 80px;
-
+    height: 70px;
     font-size: 1.2rem;
     background-color: var(--primary-color);
+    font-family: var(--font-title);
+    justify-content: center;
 }
 
-/* Elemento: logo */
+.header__inner {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
 
 .header__logo {
-    width: 250px;
+    width: 200px;
 }
 
 .header__logo img {
@@ -43,44 +46,73 @@ body {
     width: 100%;
 }
 
-/* Elemento: navigation */
-
 .header__nav {
     display: flex;
+    justify-content: center;
     gap: 2.5rem;
+  
 }
 
-/* Elemento: link */
+.header__nav--active {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translatey(70px);
+    background-color: rgb(95, 24, 24);
+}
 
 .header__link {
+    position: relative;
     color: rgb(243, 209, 209);
     text-decoration: none;
     transition: color .3s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        opacity: 0;
+        background-color: var(--tertiary-color);
+        left: 0;
+        bottom: 0;
+        transform: translateY(2px);
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+        color: #e7b86b;
+    }
 }
 
-.header__link:hover {
-    color: #00bcd4;
+.header__link--active::before {
+    opacity: 1;
 }
 
-/* Modificador: private */
-
-.header__link--private {
-    display: flex;
-    align-items: center;
+.header__btn {
+    display: none;
+    stroke-width: 1.5;
     justify-content: center;
-    gap: .8rem;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 100%;
+    padding: .2rem;
+}
 
+.header__btn--active  {
+    background-color: rgb(95, 24, 24);
+}
+
+.header__icon {
     color: white;
-    font-size: 1.1rem;
-    text-decoration: none;
-
-    transition: opacity .3s ease;
+    width: 35px;
+    height: 35px;
 }
-
-.header__link--private:hover {
-    opacity: .8;
-}
-
 
 /* ========================================
   HOME
@@ -117,7 +149,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 70px);
     padding: 2rem;
     color: white;
 }

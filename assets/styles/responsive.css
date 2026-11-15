@@ -1,8 +1,17 @@
 @media (max-width: 1024PX) {
 
+    
+    /* ========================================
+        HEADER
+    ======================================== */
+
     .header {
-        justify-content: space-between;
-        padding: 0 1.5rem;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .header__inner {
+        width: 100%;
     }
 
     .header__logo {
@@ -13,13 +22,16 @@
         display: none;
     }
 
-    .hero__content {
-        width: 100%;
-        height: calc(100dvh - 90px);
+    .header__nav.header__nav--active {
+        display: flex;
+    }
+
+    .header__btn {
+        display: flex;
     }
 
     /* ========================================
-    HOME
+        HEADER
     ======================================== */
 
     /* Legal Areas */
