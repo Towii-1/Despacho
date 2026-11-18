@@ -1,7 +1,7 @@
 :root {
     --primary-color: rgb(73, 3, 21);
     --secondary-color: #f5f1e9;
-    --tertiary-color: #e6d157;
+    --tertiary-color: #ddab5b;
 
     --font-title:'Playfair Display', serif;
     --font-primary: 'Montserrat', sans-serif;
@@ -218,13 +218,13 @@ body {
     display: flex;
     padding: .7rem 1.4rem;
     gap: 1.5rem;
-    background-color: #edcc81;
+    background-color: #e8c26b;
     color: var(--primary-color);
     border-radius: .3rem;
     transition: all .3s ease-in-out;
 
     &:hover {
-        background-color: #f6db9d;
+        background-color: #fbd989;
 
         .legal-hero__arrow-link {
             transform: translateX(6px);
@@ -323,18 +323,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #b87333;
+  color: var(--tertiary-color);
   border-radius: 100%;
   padding: .3rem;
   width: 40px;
   height: 40px;
   stroke-width: 1;
-  border: 1px solid #b87333;
+  border: 1px solid var(--tertiary-color);
   transition: all .3s ease-in-out;
 }
 
 .legal-areas__item:hover .legal-areas__icon {
-  background-color: #b87333;
+  background-color: var(--tertiary-color);
   color: white;
 }
 
@@ -384,7 +384,6 @@ body {
 .legal-about__link {
     display: flex;
     position: relative;
-    font-weight: 600;
     gap: .5rem;
     align-items: center;
     padding-bottom: 5px;
@@ -1007,14 +1006,6 @@ body {
     outline-offset: 3px;
 }
 
-/* DESPLAZAMIENTO SUAVE */
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-
 
 /*===========Colaboradores===========*/
 
@@ -1142,25 +1133,6 @@ html {
 
 /* VARIABLES Y ESTILOS GENERALES */
 
-.nosotros,
-.historia,
-.identidad,
-.pilares,
-.separador,
-.contacto-banner {
-    --vino: #581126;
-    --dorado: #c5a04d;
-    --texto: #76515b;
-    --fondo: #faf6f7;
-    font-family: 'Montserrat', sans-serif;
-}
-
-:is(.nosotros, .historia, .identidad, .pilares, .contacto-banner) *,
-:is(.nosotros, .historia, .identidad, .pilares, .contacto-banner) *::before,
-:is(.nosotros, .historia, .identidad, .pilares, .contacto-banner) *::after {
-    box-sizing: border-box;
-}
-
 /* CONTENEDORES */
 
 .nosotros__contenedor,
@@ -1172,18 +1144,6 @@ html {
     margin: auto;
 }
 
-/* TIPOGRAFÍA DE TÍTULOS */
-
-.nosotros__titulo,
-.historia__titulo,
-.identidad__titulo,
-.identidad__subtitulo,
-.pilares__titulo,
-.pilares__subtitulo,
-.historia__numero,
-.contacto-banner__titulo {
-    font-family: 'Playfair Display', serif;
-}
 
 /* ==========================================
    1. PRESENTACIÓN
