@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
 body {
     min-height: 100vh;
     line-height: 1.5;
