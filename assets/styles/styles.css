@@ -5,12 +5,16 @@
 
     --font-title:'Playfair Display', serif;
     --font-primary: 'Montserrat', sans-serif;
+
+    --text-size-title: clamp(2rem, 3vw, 3rem);
+    --text-size-subtitle: clamp(1.25rem, 1.5vw, 1.5rem);
+    --text-size-primary: clamp(1rem, 1vw , 1.125rem);
+    --text-size-secondary: clamp(0.675rem, 0.85vw, .8rem);
 }
 
 body {
   font-family: var(--font-primary);
 }
-
 
 /* ========================================
   HEADER
@@ -114,6 +118,7 @@ body {
     height: 35px;
 }
 
+
 /* ========================================
   HOME
 ======================================== */
@@ -194,7 +199,7 @@ body {
 
 .legal-hero__description {
     max-width: 600px;
-    font-size: clamp(1rem, 1vw , 1.125rem);
+    font-size: var(--text-size-primary);
 }
 
 .legal-hero__container-link {
@@ -250,8 +255,9 @@ body {
 
 
 .legal-areas__title, 
-.legal-collaborators__title {
-  font-size: clamp(1.7rem, 3.5vw, 3.5rem);
+.legal-collaborators__title,
+.legal-about__title {
+  font-size: var(--text-size-title);
   font-family: var(--font-title);
   color: var(--primary-color);
   font-weight: 500;
@@ -264,7 +270,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: .8rem;
+    font-size: var(--text-size-secondary);
     letter-spacing: .1em;
 }
 
@@ -306,13 +312,13 @@ body {
 }
 
 .legal-areas__subtitle {
-  font-family: var(--font-title);
-color: var(--primary-color);
-  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
-  font-weight: 500;
-  transform: translate(1);
-  font-style: italic;
-  transition: all .3s ease-in-out;
+    font-family: var(--font-title);
+    color: var(--primary-color);
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    font-weight: 500;
+    transform: translate(1);
+    font-style: italic;
+    transition: all .3s ease-in-out;
 }
 
 .legal-areas__item:hover .legal-areas__subtitle {
@@ -323,7 +329,7 @@ color: var(--primary-color);
   display: flex;
   align-items: center;
   gap: 3rem;
-  font-size: clamp(1rem, 1vw , 1.125rem);
+  font-size: var(--text-size-primary);
   width: 60%;
   justify-content: space-between;
 }
@@ -359,10 +365,8 @@ color: var(--primary-color);
 }
 
 .legal-about__title {
-  font-size: clamp(1.7rem, 3.5vw, 3.5rem);
-  font-family: var(--font-title);
-  font-weight: 500;
-  line-height: 1.2;
+  color: white;
+
 }
 
 .legal-about__highlight {
@@ -383,7 +387,7 @@ color: var(--primary-color);
 .legal-about__description {
     display: flex;
     flex-basis: 50%;
-    font-size: clamp(1rem, 1vw , 1.125rem);
+    font-size: var(--text-size-primary);
 }
 
 .legal-about__container-link, 
@@ -398,6 +402,7 @@ color: var(--primary-color);
     position: relative;
     gap: .5rem;
     align-items: center;
+    font-size: var(--text-size-primary);
     padding-bottom: 5px;
     transition: all .3s ease-in-out;
 }
@@ -432,7 +437,6 @@ color: var(--primary-color);
     height: 40px;
     opacity: 0.6;
     stroke-width: 8;
-    size: 4rem;
     transform: translateX(0);
     transition: all .3s ease-in-out;
 }
@@ -477,7 +481,7 @@ color: var(--primary-color);
 }
 
 .legal-collaborators__description {
-    font-size: clamp(1rem, 1vw , 1.125rem);
+    font-size: var(--text-size-primary);
 }
 
 .legal-collaborators__data {
@@ -493,13 +497,13 @@ color: var(--primary-color);
     flex-direction: column;
     align-items: center;
     font-style: italic;
-    font-size: clamp(1.25rem, 2.5vw , 2.5rem);
+    font-size: clamp(1.5rem, 2.5vw , 2.5rem);
     color: var(--primary-color);
 }
 
 .legal-collaborators__num-title {
     font-style: normal;
-    font-size: clamp(0.5rem, 1vw , 0.8rem);
+    font-size: var(--text-size-secondary);
     color: var(--primary-color);
 }
 
@@ -508,8 +512,9 @@ color: var(--primary-color);
 }
 
 
-/* =========== Servicios =========== */
-
+/* ========================================
+  SERVICES
+======================================== */
 
 .practicas,
 .laboral,
