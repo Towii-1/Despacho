@@ -1393,15 +1393,21 @@ color: var(--primary-color);
 
 /*============Nosotros================*/
 
-
 /* ==========================================
    EYRA LEGAL - NOSOTROS
    METODOLOGÍA BEM
 ========================================== */
 
-/* VARIABLES Y ESTILOS GENERALES */
+/* ESTILOS GENERALES */
 
-/* CONTENEDORES */
+.nosotros,
+.historia,
+.identidad,
+.pilares,
+.separador,
+.contacto-banner {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .nosotros__contenedor,
 .historia__contenedor,
@@ -1412,6 +1418,36 @@ color: var(--primary-color);
     margin: auto;
 }
 
+/* TIPOGRAFÍA */
+
+.nosotros__titulo,
+.historia__titulo,
+.identidad__titulo,
+.identidad__subtitulo,
+.pilares__titulo,
+.pilares__subtitulo,
+.contacto-banner__titulo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.nosotros__titulo,
+.historia__titulo,
+.identidad__titulo,
+.identidad__subtitulo,
+.pilares__titulo,
+.pilares__subtitulo {
+    color: #490519;
+}
+
+.nosotros__descripcion,
+.historia__texto,
+.identidad__descripcion,
+.pilares__descripcion,
+.pilares__texto {
+    color: #765050;
+    font-weight: 400;
+}
 
 /* ==========================================
    1. PRESENTACIÓN
@@ -1448,16 +1484,13 @@ color: var(--primary-color);
 .nosotros__titulo {
     max-width: 850px;
     margin: 0 auto 18px;
-    color: #490519;
     font-size: clamp(30px, 4vw, 42px);
-    font-weight: 600;
     line-height: 1.15;
 }
 
 .nosotros__descripcion {
     max-width: 650px;
     margin: auto;
-    color: #765050;
     font-size: 13px;
     line-height: 1.7;
 }
@@ -1507,15 +1540,12 @@ color: var(--primary-color);
 
 .historia__titulo {
     margin: 0 0 18px;
-    color: var(--vino);
     font-size: clamp(28px, 4vw, 40px);
-    font-weight: 600;
     line-height: 1.2;
 }
 
 .historia__texto {
     margin: 0 0 16px;
-    color: #6e5960;
     font-size: 14px;
     line-height: 1.8;
 }
@@ -1538,13 +1568,14 @@ color: var(--primary-color);
 .historia__numero {
     display: block;
     margin-bottom: 5px;
-    color: var(--vino);
+    color: #490519;
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .historia__detalle {
-    color: #8b6a70;
+    color: #765050;
     font-size: 12px;
     line-height: 1.5;
 }
@@ -1567,9 +1598,7 @@ color: var(--primary-color);
 .identidad__titulo,
 .pilares__titulo {
     margin: 0;
-    color: var(--vino);
     font-size: clamp(25px, 3vw, 32px);
-    font-weight: 500;
 }
 
 .identidad__linea {
@@ -1622,7 +1651,7 @@ color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--vino);
+    color: #490519;
     font-size: 16px;
 }
 
@@ -1635,14 +1664,11 @@ color: var(--primary-color);
 
 .identidad__subtitulo {
     margin: 0 0 14px;
-    color: var(--vino);
     font-size: 25px;
-    font-weight: 500;
 }
 
 .identidad__descripcion {
     margin: 0 0 25px;
-    color: #40353a;
     font-size: 13px;
     line-height: 1.8;
 }
@@ -1656,7 +1682,7 @@ color: var(--primary-color);
     letter-spacing: .5px;
 }
 
-/* MODIFICADOR BEM - VISIÓN */
+/* TARJETA VINO */
 
 .identidad__tarjeta--vino {
     background: #581b2c;
@@ -1701,7 +1727,6 @@ color: var(--primary-color);
 .pilares__descripcion {
     max-width: 650px;
     margin: auto;
-    color: var(--texto);
     font-size: 13px;
     line-height: 1.7;
 }
@@ -1748,15 +1773,12 @@ color: var(--primary-color);
 
 .pilares__subtitulo {
     margin: 0 0 12px;
-    color: var(--vino);
     font-size: 17px;
-    font-weight: 500;
     line-height: 1.4;
 }
 
 .pilares__texto {
     margin: 0 0 25px;
-    color: var(--texto);
     font-size: 12px;
     line-height: 1.8;
 }
@@ -1772,7 +1794,7 @@ color: var(--primary-color);
 }
 
 /* ==========================================
-   5. SEPARADORES DECORATIVOS
+   5. SEPARADORES
 ========================================== */
 
 .separador {
@@ -1790,12 +1812,10 @@ color: var(--primary-color);
     background: var(--dorado);
 }
 
+/* OCULTAR TEXTO DE LOS SEPARADORES */
+
 .separador__texto {
-    color: #a47b2c;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    display: none;
 }
 
 /* ==========================================
@@ -1831,7 +1851,6 @@ color: var(--primary-color);
     margin: 0 0 14px;
     color: #fff;
     font-size: clamp(26px, 4vw, 38px);
-    font-weight: 600;
     line-height: 1.2;
 }
 
@@ -1851,7 +1870,7 @@ color: var(--primary-color);
     display: inline-block;
     padding: 14px 26px;
     background: #fff;
-    color: var(--vino);
+    color: #490519;
     border: 2px solid #fff;
     border-radius: 8px;
     font-size: 14px;
@@ -1965,6 +1984,7 @@ color: var(--primary-color);
         text-align: center;
     }
 }
+
 
 
 
