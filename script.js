@@ -76,47 +76,28 @@
   // ==========================================
   // 4. WHATSAPP
   // ==========================================
+  
+  const numeroWhatsApp = "525519777010";
 
   function numeroValido() {
-    return /^\d{10,15}$/.test(CONFIG.whatsapp);
+    return /^52\d{10}$/.test(numeroWhatsApp);
   }
 
   function enlaceWhatsApp(texto) {
-    return 'https://wa.me/' + CONFIG.whatsapp +
-      '?text=' + encodeURIComponent(texto);
+    return `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
   }
 
-  // Mostrar botón inferior de WhatsApp
-  if (numeroValido()) {
-    contacto.href = enlaceWhatsApp(
-      'Hola, quisiera información sobre EYRA LEGAL.'
-    );
-
-    contacto.hidden = false;
-  } else {
-    contacto.hidden = true;
-  }
-
-  // Abrir WhatsApp desde los menús
   function abrirWhatsApp() {
     if (!numeroValido()) {
-      mensaje(
-        'El número de WhatsApp del despacho ' +
-        'todavía no está configurado.'
-      );
-      return;
+        mensaje("El número de WhatsApp no está configurado correctamente.");
+        return;
     }
 
     const url = enlaceWhatsApp(
-      'Hola, quisiera comunicarme con un asesor ' +
-      'jurídico de EYRA LEGAL.'
+        "Hola, quisiera comunicarme con un asesor jurídico de EYRA LEGAL."
     );
 
-    window.open(
-      url,
-      '_blank',
-      'noopener,noreferrer'
-    );
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   // ==========================================
