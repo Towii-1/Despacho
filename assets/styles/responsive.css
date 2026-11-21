@@ -35,13 +35,8 @@
     ======================================== */
 
     /* Legal Areas */
-    .legal-areas__item {
-        flex-direction: column;
-        justify-content: left;
-    }
-
-    .legal-areas__heading {
-        gap: 2rem;
+    .legal-areas__list {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .legal-areas__description {
@@ -73,7 +68,18 @@
 }
 
 
-@media (max-width: 640px){
+@media (max-width: 768px){
+    /* ========================================
+    HOME
+    ======================================== */
+
+    /* Legal Areas */
+    .legal-areas__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
 
     
 }
