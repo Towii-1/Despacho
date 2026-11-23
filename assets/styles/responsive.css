@@ -63,7 +63,19 @@
         padding: 4rem 2rem;
     }
 
+    /* LEGAL CONTACT */
 
+    .legal-contact__description {
+        width: auto;
+    }
+
+    .legal-contact__list {
+        flex-direction: column;
+    }
+
+    .legal-contact__item {
+        flex-direction: column;
+    }
 
 }
 

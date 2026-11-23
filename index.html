@@ -182,32 +182,56 @@
         <div class="legal-contact__list">
           <div class="legal-contact__items">
             <div class="legal-contact__item">
-              <h3 class="legal-contact__subtitle">Teléfono</h3>
-              <p class="legal-contact__text">56 2779 9211</p>
+              <svg class="legal-contact__item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-phone">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+              </svg>
+              <div class="legal-contact__container-text">
+                <h3 class="legal-contact__subtitle">Teléfono / WhatsApp</h3>
+                <p class="legal-contact__text">56 2779 9211</p>
+              </div>
+              <a class="legal-contact__whatsaap" href="https://wa.me/525512345678" target="_blank">
+                Chat
+              </a>
             </div>
             <div class="legal-contact__item">
-              <h3 class="legal-contact__subtitle">Dirección</h3>
-              <p class="legal-contact__text">Av. José López Portillo 123, Villa de las Flores, <br>
-                 55710 San Francisco Coacalco, Méx.</p>
+              <svg class="legal-contact__item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin-check">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path d="M11.87 21.48a1.992 1.992 0 0 1 -1.283 -.58l-4.244 -4.243a8 8 0 1 1 13.355 -3.474" />
+                <path d="M15 19l2 2l4 -4" />
+              </svg>
+              <div class="legal-contact__container-text">
+                <h3 class="legal-contact__subtitle">Dirección</h3>
+                <p class="legal-contact__text">Av. José López Portillo 123, Villa de las Flores, <br>
+                  55710 San Francisco Coacalco, Méx.</p>
+              </div>
             </div>
             <div class="legal-contact__item">
-              <h3 class="legal-contact__subtitle">Horarios de atención</h3>
-              <p class="legal-contact__text">Lunes - Viernes: 9:00 a. m. a 6:00 p. m.</p>
-              <p class="legal-contact__text">Sábados: 9:00 a. m. a 2:00 p. m.</p>
+              <svg class="legal-contact__item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clock">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M12 7v5l3 3" />
+              </svg>
+              <div class="legal-contact__container-text">
+                <h3 class="legal-contact__subtitle">Horarios de atención</h3>
+                <p class="legal-contact__text">Lunes - Viernes: 9:00 a. m. a 6:00 p. m.</p>
+                <p class="legal-contact__text">Sábados: 9:00 a. m. a 2:00 p. m.</p>
+              </div>
             </div>
           </div>
           
           <form class="legal-contact__form" action="https://formspree.io/f/mvkabqpb" method="POST">
             <label class="legal-contact__label">Nombre:
-              <input  class="legal-contact__input" type="text" name="name" placeholder="Nombre completo">
+              <input  class="legal-contact__input" type="text" name="name" placeholder="Nombre completo" required>
             </label>
             <label class="legal-contact__label">
               Email:
-              <input class="legal-contact__input" type="email" name="email" placeholder="ejemplo@gmail.com">
+              <input class="legal-contact__input" type="email" name="email" placeholder="ejemplo@gmail.com" required>
             </label>
             <label class="legal-contact__label">
               Explícanos tu caso:
-              <textarea class="legal-contact__input" name="message" placeholder="Tu mensaje aquí..."></textarea>
+              <textarea class="legal-contact__input" name="message" placeholder="Tu mensaje aquí..." required></textarea>
             </label>
             <button type="submit">Enviar</button>
           </form>

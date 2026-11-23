@@ -561,19 +561,47 @@ body {
 
 .legal-contact__list {
     display: flex;
-    gap: 1rem;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
 .legal-contact__items {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1rem; 
 }
 
 .legal-contact__item {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
     background-color: #25060a;
     padding: 1rem 2rem;
     border-radius: 1rem;
+}
+
+.legal-contact__whatsaap {
+    background-color: rgb(66, 3, 3);
+    padding: 0.7rem 1rem;
+    border-radius: 1rem;
+    margin-left: auto;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: rgb(122, 12, 12)
+    }
+}
+
+.legal-contact__item-icon {
+    box-sizing: content-box;
+    width: 40px;
+    height: 40px;
+    background-color: #3a1710;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    color: #e5c378;
+    stroke-width: 2;
+    border: 1px solid #e5c378;
 }
 
 .legal-contact__subtitle {
@@ -589,7 +617,6 @@ body {
 .legal-contact__form {
   width: 100%;
   max-width: 600px;
-  margin: 40px auto;
   padding: 40px;
   background-color: #f5f1e9;
   border: 1px solid #e5ded1;
@@ -598,7 +625,6 @@ body {
   flex-direction: column;
   gap: 24px;
   box-shadow: 0 10px 35px rgba(40, 35, 25, 0.07);
-  box-sizing: border-box;
 }
 
 .legal-contact__label {
