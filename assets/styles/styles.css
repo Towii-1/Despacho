@@ -161,7 +161,8 @@ body {
 
 .legal-hero__inner, 
 .legal-areas__inner, 
-.legal-about__inner {
+.legal-about__inner,
+.legal-contact__inner {
     display: flex;
     flex-direction: column;
     width: 85%;
@@ -256,7 +257,8 @@ body {
 
 .legal-areas__title, 
 .legal-collaborators__title,
-.legal-about__title {
+.legal-about__title,
+.legal-contact__title {
   font-size: var(--text-size-title);
   font-family: var(--font-title);
   color: var(--primary-color);
@@ -266,7 +268,8 @@ body {
 
 .legal-areas__eyebrow, 
 .legal-about__eyebrow, 
-.legal-collaborators__eyebrow {
+.legal-collaborators__eyebrow,
+.legal-contact__eyebrow {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -276,7 +279,8 @@ body {
 
 .legal-areas__eyebrow::before, 
 .legal-about__eyebrow::before, 
-.legal-collaborators__eyebrow::before {
+.legal-collaborators__eyebrow::before,
+.legal-contact__eyebrow::before {
   content: "";
   display: inline-block;
   width: 40px;
@@ -390,7 +394,8 @@ body {
 
 /*  LEGAL ABOUT  */
 
-.legal-about {
+.legal-about, 
+.legal-contact {
   background-color: var(--primary-color);
   width: 100%;
   display: flex;
@@ -399,9 +404,11 @@ body {
   color: white;
 }
 
-.legal-about__title {
+.legal-about__title,
+.legal-contact__title {
   color: white;
-
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .legal-about__highlight {
@@ -412,9 +419,7 @@ body {
 
 .legal-about__content {
     display: flex;
-    border-top: 1px solid var(--tertiary-color);
     justify-content: space-between;
-    padding: 2rem 0;
     color: var(--secondary-color);
     gap: 4rem;
 }
@@ -544,6 +549,123 @@ body {
 
 .legal-collaborators__link {
     color: var(--primary-color);
+}
+
+/* LEGAL CONTACT */
+
+.legal-contact__description {
+    color: white;
+    font-size: var(--text-size-primary);
+    width: 50%;
+}
+
+.legal-contact__list {
+    display: flex;
+    gap: 1rem;
+}
+
+.legal-contact__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.legal-contact__item {
+    background-color: #25060a;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.legal-contact__subtitle {
+    font-size: var(--text-size-subtitle);
+    font-family: var(--font-title);
+}
+
+.legal-contact__text {
+    font-size: var(--text-size-primary);
+}
+
+
+.legal-contact__form {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #f5f1e9;
+  border: 1px solid #e5ded1;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 10px 35px rgba(40, 35, 25, 0.07);
+  box-sizing: border-box;
+}
+
+.legal-contact__label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #292820;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.legal-contact__input {
+  width: 100%;
+  padding: 15px 16px;
+  background-color: #fffefa;
+  border: 1px solid #d9d1c3;
+  border-radius: 8px;
+  outline: none;
+  color: #292820;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.legal-contact__input::placeholder {
+  color: #aaa397;
+}
+
+.legal-contact__input:focus {
+  border-color: #84745b;
+  box-shadow: 0 0 0 3px rgba(132, 116, 91, 0.12);
+  background-color: #ffffff;
+}
+
+.legal-contact__form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.legal-contact__form button {
+  width: 100%;
+  padding: 16px 24px;
+  margin-top: 5px;
+  background-color: #292820;
+  color: #f5f1e9;
+  border: 1px solid #292820;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.legal-contact__form button:hover {
+  background-color: #84745b;
+  border-color: #84745b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 35, 25, 0.15);
+}
+
+.legal-contact__form button:active {
+  transform: translateY(0);
 }
 
 
