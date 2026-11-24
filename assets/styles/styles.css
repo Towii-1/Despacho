@@ -884,12 +884,11 @@ body {
 
 /* ==========================================
    2. ESPECIALIDADES JURÍDICAS
-   LABORAL - FAMILIAR - PENAL - MERCANTIL
+    FAMILIAR - PENAL - MERCANTIL
 ========================================== */
 
 /* BLOQUES PRINCIPALES */
 
-.laboral,
 .familiar,
 .penal,
 .mercantil {
@@ -899,7 +898,6 @@ body {
 
 /* CONTENEDORES */
 
-.laboral__contenedor,
 .familiar__contenedor,
 .penal__contenedor,
 .mercantil__contenedor {
@@ -908,8 +906,6 @@ body {
 }
 
 /* ENCABEZADOS */
-
-.laboral__encabezado,
 .familiar__encabezado,
 .penal__encabezado,
 .mercantil__encabezado {
@@ -917,8 +913,6 @@ body {
 }
 
 /* ETIQUETAS */
-
-.laboral__etiqueta,
 .familiar__etiqueta,
 .penal__etiqueta,
 .mercantil__etiqueta {
@@ -940,8 +934,6 @@ body {
 }
 
 /* TÍTULOS */
-
-.laboral__titulo,
 .familiar__titulo,
 .penal__titulo,
 .mercantil__titulo {
@@ -951,8 +943,6 @@ body {
 }
 
 /* DESCRIPCIONES */
-
-.laboral__descripcion,
 .familiar__descripcion,
 .penal__descripcion,
 .mercantil__descripcion {
@@ -969,7 +959,6 @@ body {
 
 /* CUADRÍCULAS */
 
-.laboral__servicios,
 .familiar__servicios,
 .penal__servicios,
 .mercantil__servicios {
@@ -981,7 +970,6 @@ body {
 
 /* TARJETAS */
 
-.laboral__tarjeta,
 .familiar__tarjeta,
 .penal__tarjeta,
 .mercantil__tarjeta {
@@ -994,7 +982,6 @@ body {
 
 /* EFECTO HOVER */
 
-.laboral__tarjeta:hover,
 .familiar__tarjeta:hover,
 .penal__tarjeta:hover,
 .mercantil__tarjeta:hover {
@@ -1004,7 +991,6 @@ body {
 
 /* ICONOS */
 
-.laboral__icono,
 .familiar__icono,
 .penal__icono,
 .mercantil__icono {
@@ -1022,7 +1008,6 @@ body {
 
 /* SUBTÍTULOS */
 
-.laboral__subtitulo,
 .familiar__subtitulo,
 .penal__subtitulo,
 .mercantil__subtitulo {
@@ -1034,7 +1019,6 @@ body {
 
 /* TEXTOS */
 
-.laboral__texto,
 .familiar__texto,
 .penal__texto,
 .mercantil__texto {
@@ -1048,7 +1032,6 @@ body {
    4. CONTACTO
 ========================================== */
 
-.laboral__contacto,
 .familiar__contacto,
 .penal__contacto,
 .mercantil__contacto {
@@ -1061,7 +1044,6 @@ body {
     border-radius: 7px;
 }
 
-.laboral__contacto-informacion,
 .familiar__contacto-informacion,
 .penal__contacto-informacion,
 .mercantil__contacto-informacion {
@@ -1070,7 +1052,6 @@ body {
 
 /* TÍTULOS DE CONTACTO */
 
-.laboral__contacto-titulo,
 .familiar__contacto-titulo,
 .penal__contacto-titulo,
 .mercantil__contacto-titulo {
@@ -1082,7 +1063,6 @@ body {
 
 /* TEXTOS DE CONTACTO */
 
-.laboral__contacto-texto,
 .familiar__contacto-texto,
 .penal__contacto-texto,
 .mercantil__contacto-texto {
@@ -1094,7 +1074,6 @@ body {
 
 /* BOTONES */
 
-.laboral__boton,
 .familiar__boton,
 .penal__boton,
 .mercantil__boton {
@@ -1114,7 +1093,6 @@ body {
 
 /* HOVER DE BOTONES */
 
-.laboral__boton:hover,
 .familiar__boton:hover,
 .penal__boton:hover,
 .mercantil__boton:hover {
@@ -1123,7 +1101,6 @@ body {
 
 /* ACCESIBILIDAD */
 
-.laboral__boton:focus-visible,
 .familiar__boton:focus-visible,
 .penal__boton:focus-visible,
 .mercantil__boton:focus-visible {
@@ -1156,21 +1133,18 @@ body {
 
 @media (max-width: 768px) {
 
-    .laboral,
     .familiar,
     .penal,
     .mercantil {
         padding: 45px 20px;
     }
 
-    .laboral__titulo,
     .familiar__titulo,
     .penal__titulo,
     .mercantil__titulo {
         font-size: 32px;
     }
 
-    .laboral__contacto,
     .familiar__contacto,
     .penal__contacto,
     .mercantil__contacto {
@@ -1205,14 +1179,12 @@ body {
         padding: 10px;
     }
 
-    .laboral__titulo,
     .familiar__titulo,
     .penal__titulo,
     .mercantil__titulo {
         font-size: 29px;
     }
 
-    .laboral__servicios,
     .familiar__servicios,
     .penal__servicios,
     .mercantil__servicios {
@@ -1220,21 +1192,18 @@ body {
         gap: 15px;
     }
 
-    .laboral__tarjeta,
     .familiar__tarjeta,
     .penal__tarjeta,
     .mercantil__tarjeta {
         padding: 20px;
     }
 
-    .laboral__contacto,
     .familiar__contacto,
     .penal__contacto,
     .mercantil__contacto {
         padding: 22px;
     }
 
-    .laboral__boton,
     .familiar__boton,
     .penal__boton,
     .mercantil__boton {
