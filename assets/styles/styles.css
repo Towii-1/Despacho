@@ -1,5 +1,5 @@
 :root {
-    --primary-color: rgb(73, 3, 21);
+    --primary-color: #490315;
     --secondary-color: #f5f1e9;
     --tertiary-color: #ddab5b;
 
@@ -699,23 +699,6 @@ body {
   SERVICES
 ======================================== */
 
-.practicas,
-.laboral,
-.familiar,
-.penal,
-.mercantil {
-    font-family: var(--font-titles);
-}
-
-.practicas *,
-.laboral *,
-.familiar *,
-.penal *,
-.mercantil * {
-    box-sizing: border-box;
-}
-
-
 .practicas {
     padding: 40px 0;
     background: #f8f3f4;
@@ -731,7 +714,7 @@ body {
     display: grid;
     grid-template-columns: minmax(0, 1.45fr) minmax(300px, 1fr);
     align-items: center;
-    gap: 35px;
+    gap: 2.18rem;
 }
 
 .practicas__encabezado {
@@ -745,7 +728,7 @@ body {
 .practicas__etiqueta,
 .practicas__navegacion-titulo {
     color: #704327;
-    font-size: 9px;
+    font-size: var(--text-size-secondary);
     font-weight: 700;
     letter-spacing: .5px;
 }
@@ -757,18 +740,18 @@ body {
 }
 
 .practicas__titulo {
-    margin: 0 0 8px;
-    color: #490519;
-    font: 500 clamp(31px, 3.5vw, 46px) Georgia, serif;
-    letter-spacing: -1.5px;
-    line-height: 1.15;
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-size: var(--text-size-title);
+    line-height: 1.2;
+    font-weight: 500;
 }
 
 .practicas__descripcion {
-    max-width: 520px;
+    max-width: 100%;
     margin: 0;
     color: #765050;
-    font-size: 14px;
+    font-size: var(--text-size-primary);
     line-height: 1.6;
 }
 
@@ -785,6 +768,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-bottom: 12px;
+    align-items: center;
 }
 
 .practicas__dato {
@@ -801,13 +785,13 @@ body {
 
 .practicas__cantidad {
     color: #490519;
-    font: 22px Georgia, serif;
+    font: clamp(1rem, 1.4vw, 1.4rem) Georgia, serif;
     margin-bottom: 4px;
 }
 
 .practicas__detalle {
     color: #79512e;
-    font-size: 9px;
+    font-size: clamp(0.5rem, 0.7vw, 0.7rem);
     font-weight: 700;
 }
 
@@ -822,7 +806,7 @@ body {
 
 .practicas__validacion-texto {
     color: #805d63;
-    font-size: 10px;
+    font-size: var(--text-size-secondary);
 }
 
 .practicas__cedula {
@@ -843,6 +827,8 @@ body {
 
 .practicas__navegacion {
     margin-top: 46px;
+    font-size: var(--text-size-secondary);
+    font-family: var(--font-title);
 }
 
 .practicas__enlaces {
@@ -857,7 +843,6 @@ body {
     background: #f2ebed;
     color: #351323;
     border-radius: 3px;
-    font-size: 10px;
     font-weight: 700;
     text-decoration: none;
     transition: background .3s, color .3s;
@@ -869,7 +854,7 @@ body {
 }
 
 .practicas__enlace:hover {
-    background: #580f29;
+    background: var(--primary-color);
     color: #fff;
 }
 
@@ -878,7 +863,7 @@ body {
 }
 
 .practicas__enlace:focus-visible {
-    outline: 2px solid #580f29;
+    outline: 2px solid var(--primary-color);
     outline-offset: 3px;
 }
 
@@ -919,7 +904,7 @@ body {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 14px;
-    background: #581126;
+    background: #694c27;
     color: #fff;
     border-radius: 3px;
     font-size: 10px;
@@ -927,19 +912,16 @@ body {
     letter-spacing: 1px;
 }
 
-/* COLOR ESPECIAL PARA FAMILIAR */
-
-.familiar__etiqueta {
-    background: #694c27;
-}
 
 /* TÍTULOS */
 .familiar__titulo,
 .penal__titulo,
 .mercantil__titulo {
     margin: 0 0 12px;
-    color: #480b1f;
-    font: 500 38px Georgia, serif;
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-size: var(--text-size-title);
+    font-weight: 500;
 }
 
 /* DESCRIPCIONES */
@@ -949,8 +931,7 @@ body {
     max-width: 750px;
     margin: 0;
     color: #76515b;
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: var(--text-size-primary);
 }
 
 /* ==========================================
@@ -1011,10 +992,10 @@ body {
 .familiar__subtitulo,
 .penal__subtitulo,
 .mercantil__subtitulo {
-    margin: 0 0 9px;
     color: #490c23;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: var(--text-size-subtitle);
+    font-family: var(--font-title);
+    font-weight: 500;
 }
 
 /* TEXTOS */
@@ -1024,8 +1005,7 @@ body {
 .mercantil__texto {
     margin: 0;
     color: #745b63;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: var(--text-size-primary);
 }
 
 /* ==========================================
@@ -1040,7 +1020,7 @@ body {
     justify-content: space-between;
     gap: 25px;
     padding: 25px 30px;
-    background: #581126;
+    background: var(--primary-color);
     border-radius: 7px;
 }
 
@@ -1057,8 +1037,7 @@ body {
 .mercantil__contacto-titulo {
     margin: 0 0 7px;
     color: #fff;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: var(--text-size-primary);
 }
 
 /* TEXTOS DE CONTACTO */
@@ -1068,8 +1047,7 @@ body {
 .mercantil__contacto-texto {
     margin: 0;
     color: #efdce2;
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: var(--text-size-secondary);
 }
 
 /* BOTONES */
@@ -1085,8 +1063,8 @@ body {
     background: #fff;
     color: #581126;
     border-radius: 4px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: var(--text-size-secondary);
+    font-weight: 600;
     text-decoration: none;
     transition: background .3s;
 }
