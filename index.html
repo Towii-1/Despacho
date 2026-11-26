@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Asistente del despacho</title>
+  <title>EYRA LEGAL</title>
 
   <!-- Conexión con CSS -->
   <link rel="stylesheet" href="assets/styles/reset.css">
@@ -13,10 +13,8 @@
   <link rel="stylesheet" href="assets/styles/responsive.css">
 
   <!-- Conexión con JavaScript -->
-  <script src="script.js" type="module"></script>
   <script src="header.js" type="module"></script>
-</head>
-
+</head>  
 <body>
 
   <!-- PÁGINA ORIGINAL: NO MODIFICAR -->
@@ -188,9 +186,52 @@
                 <h3 class="legal-contact__subtitle">Teléfono / WhatsApp</h3>
                 <p class="legal-contact__text">56 2779 9211</p>
               </div>
-              <a class="legal-contact__whatsaap" href="https://wa.me/525512345678" target="_blank">
+              <a class="legal-contact__whatsaap" href="https://wa.me/525526540375" target="_blank">
                 Chat
               </a>
+            </div>
+            <!-- FACEBOOK -->
+              <div class="legal-contact__item">
+
+              <svg class="legal-contact__item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2z"/>
+              </svg>
+
+                <div class="legal-contact__container-text">
+                    <h3 class="legal-contact__subtitle">Facebook</h3>
+                    <p class="legal-contact__text">Síguenos en Facebook</p>
+                </div>
+
+                <a class="legal-contact__whatsaap"
+                  href="https://www.facebook.com/profile.php?id=61596269428653"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Visitar
+                </a>
+
+            </div>
+
+            <!-- INSTAGRAM -->
+            <div class="legal-contact__item">
+
+                <svg class="legal-contact__item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M17.5 6.5h.01"/>
+                </svg>
+
+                <div class="legal-contact__container-text">
+                    <h3 class="legal-contact__subtitle">Instagram</h3>
+                    <p class="legal-contact__text">Síguenos en Instagram</p>
+                </div>
+
+                <a class="legal-contact__whatsaap"
+                  href="https://www.instagram.com/eyralegal91/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Visitar
+                </a>
+
             </div>
             <div class="legal-contact__item">
               <svg class="legal-contact__item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin-check">
@@ -240,6 +281,7 @@
   </main>
 
 
+  
 
 
 
@@ -247,155 +289,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- BOTÓN ORIGINAL: NO MODIFICAR -->
-  <button
-    id="legal-launch"
-    class="legal-launch"
-    type="button"
-    aria-controls="legal-chat"
-    aria-expanded="false">
-    Abrir asistente
-  </button>
-
-  <!-- ATENEA: ASISTENTE VIRTUAL -->
-  <section
-    id="legal-chat"
-    class="legal-chat"
-    aria-labelledby="legal-title"
-    hidden>
-
-    <!-- Encabezado -->
-    <header class="legal-header">
-
-      <!-- Avatar de balanza plateada -->
-      <div class="legal-avatar" aria-hidden="true">
-
-        <svg
-          viewBox="0 0 64 64"
-          width="34"
-          height="34"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-
-          <path d="M32 8V52"/>
-          <path d="M19 56H45"/>
-          <path d="M25 52H39"/>
-          <path d="M11 20H53"/>
-          <path d="M32 12L11 20"/>
-          <path d="M32 12L53 20"/>
-
-          <path d="M12 20L5 39H19L12 20Z"/>
-          <path d="M52 20L45 39H59L52 20Z"/>
-
-          <path d="M5 39Q12 48 19 39"/>
-          <path d="M45 39Q52 48 59 39"/>
-
-          <circle
-            cx="32"
-            cy="9"
-            r="3"
-            fill="currentColor"/>
-        </svg>
-
-      </div>
-
-      <!-- Nombre del asistente -->
-      <div class="legal-identity">
-        <strong id="legal-title">Atenea</strong>
-        <span>Asistente virtual de EYRA LEGAL</span>
-      </div>
-
-      <!-- Cerrar asistente -->
-      <button
-        id="legal-close"
-        class="legal-close"
-        type="button"
-        aria-label="Cerrar asistente">
-        &times;
-      </button>
-
-    </header>
-
-    <!-- Aviso informativo -->
-    <p class="legal-notice">
-      Asistente automatizado de información general.
-      No sustituye la asesoría jurídica ni confirma citas.
-      No compartas documentos ni datos confidenciales.
-    </p>
-
-    <!-- Conversación y menús -->
-    <div id="legal-content" class="legal-content">
-
-      <!-- Mensajes -->
-      <div
-        id="legal-log"
-        class="legal-log"
-        role="log"
-        aria-live="polite"
-        aria-label="Conversación">
-      </div>
-
-      <!-- Botones dinámicos -->
-      <nav
-        id="legal-options"
-        class="legal-options"
-        aria-label="Opciones de Atenea">
-      </nav>
-
-    </div>
-
-    <!-- Escribir preguntas -->
-    <form id="legal-form" class="legal-form">
-
-      <input
-        id="legal-input"
-        type="text"
-        aria-label="Pregunta para Atenea"
-        placeholder="¿En qué puedo orientarte hoy?"
-        maxlength="300"
-        required
-        autocomplete="off">
-
-      <button type="submit">
-        Enviar
-      </button>
-
-    </form>
-
-    <!-- WhatsApp inferior -->
-    <a
-      id="legal-contact"
-      class="legal-contact"
-      target="_blank"
-      rel="noopener noreferrer"
-      hidden>
-      Continuar en WhatsApp
-    </a>
-
-    <!-- Aviso de privacidad -->
-    <footer id="legal-footer"></footer>
-
-  </section>
+    
+  
 
       <!-- FOOTER -->
    <footer class="footer">
@@ -411,9 +306,12 @@
         <p class="footer__lema">
             Compromiso, ética y excelencia jurídica.
         </p>
+    <!-- Asistente virtual -->
+    <div id="atenea"></div>
 
-    </div>
-    </footer>
+    <!-- Conexión con JavaScript -->
+    <script src="./atenea.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
 

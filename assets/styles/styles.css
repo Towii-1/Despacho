@@ -1068,6 +1068,26 @@ body {
     text-decoration: none;
     transition: background .3s;
 }
+/* Separación de botones flotantes */
+
+.volver {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: auto;
+    z-index: 999;
+}
+
+.legal-launch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.legal-chat {
+    z-index: 1001;
+}
 
 /* HOVER DE BOTONES */
 
@@ -1554,6 +1574,26 @@ body {
 }
 
 /* TIPOGRAFÍA */
+/* SUBTÍTULOS */
+
+.familiar__subtitulo,
+.penal__subtitulo,
+.mercantil__subtitulo {
+    color: #490c23;
+    font-size: var(--text-size-subtitle);
+    font-family: var(--font-title);
+    font-weight: 500;
+}
+
+/* TEXTOS */
+
+.familiar__texto,
+.penal__texto,
+.mercantil__texto {
+    margin: 0;
+    color: #745b63;
+    font-size: var(--text-size-primary);
+}
 
 .nosotros__titulo,
 .historia__titulo,
@@ -1572,7 +1612,7 @@ body {
 .identidad__subtitulo,
 .pilares__titulo,
 .pilares__subtitulo {
-    color: #490519;
+    color: var(--primary-color);
 }
 
 .nosotros__descripcion,
@@ -1626,7 +1666,7 @@ body {
 .nosotros__descripcion {
     max-width: 650px;
     margin: auto;
-    font-size: 13px;
+    font-size: var(--text-size-primary);
     line-height: 1.7;
 }
 
@@ -1668,7 +1708,7 @@ body {
     display: block;
     margin-bottom: 12px;
     color: #a47b2c;
-    font-size: 10px;
+    font-size: var(--text-size-secondary);
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -1681,7 +1721,7 @@ body {
 
 .historia__texto {
     margin: 0 0 16px;
-    font-size: 14px;
+    font-size: var(--text-size-primary);
     line-height: 1.8;
 }
 
@@ -1733,7 +1773,7 @@ body {
 .identidad__titulo,
 .pilares__titulo {
     margin: 0;
-    font-size: clamp(25px, 3vw, 32px);
+    font-size: var(--text-size-title);
 }
 
 .identidad__linea {
@@ -1766,6 +1806,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .identidad__cabecera {
@@ -1787,7 +1828,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #490519;
-    font-size: 16px;
+    font-size: var(--text-size-secondary);
 }
 
 .identidad__icono {
@@ -1799,12 +1840,12 @@ body {
 
 .identidad__subtitulo {
     margin: 0 0 14px;
-    font-size: 25px;
+    font-size: var(--text-size-subtitle);
 }
 
 .identidad__descripcion {
     margin: 0 0 25px;
-    font-size: 13px;
+    font-size: var(--text-size-primary);
     line-height: 1.8;
 }
 
@@ -1857,12 +1898,13 @@ body {
 
 .pilares__titulo {
     margin-bottom: 10px;
+    font-size: var(--text-size-title);
 }
 
 .pilares__descripcion {
     max-width: 650px;
     margin: auto;
-    font-size: 13px;
+    font-size: var( --text-size-primary);
     line-height: 1.7;
 }
 
@@ -1895,7 +1937,7 @@ body {
 .pilares__numero {
     color: #9a702d;
     font-family: 'Playfair Display', serif;
-    font-size: 13px;
+    font-size: var( --text-size-secondary);
     font-weight: 600;
 }
 
@@ -1908,13 +1950,13 @@ body {
 
 .pilares__subtitulo {
     margin: 0 0 12px;
-    font-size: 17px;
+    font-size: var(--text-size-subtitle);
     line-height: 1.4;
 }
 
 .pilares__texto {
     margin: 0 0 25px;
-    font-size: 12px;
+    font-size: var(--text-size-primary);
     line-height: 1.8;
 }
 
@@ -1923,7 +1965,7 @@ body {
     padding-top: 15px;
     border-top: 1px solid #f0e8eb;
     color: #9a702d;
-    font-size: 9px;
+    font-size: var(--text-size-secondary);
     font-weight: 600;
     letter-spacing: .4px;
 }
@@ -1985,7 +2027,7 @@ body {
 .contacto-banner__titulo {
     margin: 0 0 14px;
     color: #fff;
-    font-size: clamp(26px, 4vw, 38px);
+    font-size: var(--text-size-subtitle);
     line-height: 1.2;
 }
 
@@ -1993,7 +2035,7 @@ body {
     max-width: 650px;
     margin: 0;
     color: #f5e6ea;
-    font-size: 14px;
+    font-size: var(--text-size-primary);
     line-height: 1.8;
 }
 
@@ -2008,7 +2050,7 @@ body {
     color: #490519;
     border: 2px solid #fff;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: var(--text-size-subtitle);
     font-weight: 700;
     text-decoration: none;
     transition: background .3s, border-color .3s;
@@ -2141,8 +2183,8 @@ body {
 
     z-index: 1001;
 
-    background: #18283d;
-    color: white;
+    background: #EBC46E;
+    color: #641E35;
     border: 0;
     border-radius: 8px;
     padding: 11px;

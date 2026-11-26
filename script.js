@@ -60,8 +60,7 @@
       ? 'legal-message legal-user'
       : 'legal-message';
 
-    p.textContent =
-      (usuario ? 'Tú: ' : 'Atenea: ') + texto;
+    p.textContent = usuario ? texto : 'Atenea: ' + texto;
 
     log.appendChild(p);
 
@@ -77,7 +76,7 @@
   // 4. WHATSAPP
   // ==========================================
   
-  const numeroWhatsApp = "525519777010";
+  const numeroWhatsApp = "525526540375";
 
   function numeroValido() {
     return /^52\d{10}$/.test(numeroWhatsApp);
@@ -200,10 +199,6 @@
 
     mostrarOpciones([
       {
-        texto: 'Derecho laboral',
-        accion: () => mostrarServicio('laboral')
-      },
-      {
         texto: 'Derecho mercantil',
         accion: () => mostrarServicio('mercantil')
       },
@@ -228,13 +223,6 @@
 
   function mostrarServicio(tipo) {
     const respuestas = {
-      laboral:
-        '⚖️ DERECHO LABORAL\n\n' +
-        'Esta área aborda las relaciones entre ' +
-        'trabajadores y empleadores, incluyendo ' +
-        'despidos, contratos laborales, salarios ' +
-        'y prestaciones.',
-
       mercantil:
         '⚖️ DERECHO MERCANTIL\n\n' +
         'Esta área comprende contratos comerciales, ' +
@@ -505,7 +493,7 @@
     mensaje(
       'No tengo una respuesta preparada para ' +
       'esa pregunta. Puedo informarte sobre ' +
-      'derecho laboral, mercantil, familiar ' +
+      'derecho mercantil, familiar ' +
       'y penal, además de horarios, ubicación ' +
       'y solicitudes de cita.'
     );
