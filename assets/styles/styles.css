@@ -2605,3 +2605,271 @@ body {
     transition: none;
   }
 }
+
+/* ==========================================
+   FOOTER - EYRA LEGAL
+========================================== */
+
+.footer {
+    width: 100%;
+    background-color: #491326;
+    padding: 25px 20px 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.footer__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__marca {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.footer__copyright {
+    color: #D1C6C9;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer__developers {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #C5A04D;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer__developers:hover {
+    color: #FFFFFF;
+}
+
+
+/* ==========================================
+   VENTANA EMERGENTE
+========================================== */
+
+.developers {
+    position: fixed;
+    inset: 0;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    margin: auto;
+    padding: 0;
+    border: none;
+    border-top: 4px solid #641E35;
+    border-radius: 8px;
+    background-color: #FCFAF7;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.developers:not([open]) {
+    display: none;
+}
+
+.developers::backdrop {
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+.developers__container {
+    position: relative;
+    padding: 35px 30px;
+}
+
+
+/* ==========================================
+   BOTÓN DE CIERRE
+========================================== */
+
+.developers__close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: #641E35;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.developers__close:hover {
+    color: #C5A04D;
+}
+
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.developers__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.developers__eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #967431;
+    margin: 0 0 10px;
+}
+
+.developers__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #641E35;
+    margin: 0 0 15px;
+}
+
+.developers__title::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 2px;
+    background-color: #C5A04D;
+    margin: 12px auto;
+}
+
+.developers__description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+}
+
+
+/* ==========================================
+   EQUIPO DE DESARROLLO
+========================================== */
+
+.developers__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.developers__member {
+    text-align: center;
+}
+
+.developers__image {
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid #C5A04D;
+    padding: 4px;
+    box-sizing: border-box;
+    margin: 0 auto 12px;
+}
+
+.developers__name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #641E35;
+    margin: 0 0 5px;
+}
+
+.developers__role {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    margin: 0;
+}
+
+
+/* ==========================================
+   INFORMACIÓN INSTITUCIONAL
+========================================== */
+
+.developers__footer {
+    border-top: 1px solid #C0C0C0;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.developers__career {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+}
+
+.developers__university {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #641E35;
+    margin: 8px 0 0;
+}
+
+.developers__year {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #777777;
+    margin: 6px 0 0;
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVO
+========================================== */
+
+@media screen and (max-width: 480px) {
+
+    .footer__copyright {
+        font-size: 12px;
+    }
+
+    .footer__developers {
+        font-size: 14px;
+    }
+
+    .developers__container {
+        padding: 35px 15px;
+    }
+
+    .developers__title {
+        font-size: 26px;
+    }
+
+    .developers__image {
+        width: 85px;
+        height: 85px;
+    }
+
+    .developers__name {
+        font-size: 14px;
+    }
+
+    .developers__grid {
+        gap: 20px 10px;
+    }
+
+}
