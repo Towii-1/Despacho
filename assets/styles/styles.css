@@ -2605,6 +2605,649 @@ body {
     transition: none;
   }
 }
+/* ==========================================
+   EYRA LEGAL - MODO OSCURO
+/* ==========================================   
+/* BOTÓN FLOTANTE - MODO OSCURO */
+
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    left: auto;
+    bottom: auto;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+
+    background: #490315;
+    color: #ddab5b;
+    border: 1px solid #ddab5b;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: background .3s, color .3s;
+}
+
+.theme-toggle svg {
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+}
+
+.theme-toggle:hover {
+    background: #ddab5b;
+    color: #490315;
+}
+
+.dark-mode .theme-toggle {
+    background: #252226;
+    color: #ddab5b;
+}
+
+.dark-mode .theme-toggle:hover {
+    background: #ddab5b;
+    color: #490315;
+}
+
+
+/* ==========================================
+   VARIABLES DEL MODO OSCURO
+========================================== */
+
+body.dark-mode {
+    --dark-background: #181619;
+    --dark-card: #252226;
+    --dark-title: #f5e9ee;
+    --dark-text: #c9c1c5;
+    --dark-border: #42383e;
+    --dark-gold: #ddab5b;
+
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+.dark-mode .theme-toggle {
+    background: var(--dark-card);
+    color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   INICIO - ÁREAS DE PRÁCTICA JURÍDICA
+========================================== */
+
+.dark-mode .legal-areas {
+    background-color: var(--dark-background);
+}
+
+.dark-mode .legal-areas__title,
+.dark-mode .legal-areas__subtitle {
+    color: var(--dark-title);
+}
+
+.dark-mode .legal-areas__eyebrow,
+.dark-mode .legal-areas__num {
+    color: var(--dark-gold);
+}
+
+.dark-mode .legal-areas__item {
+    background-color: var(--dark-card);
+    border-color: var(--dark-border);
+    box-shadow: 0 4px 12px #0003;
+}
+
+.dark-mode .legal-areas__description,
+.dark-mode .legal-areas__text-footer {
+    color: var(--dark-text);
+}
+
+.dark-mode .legal-areas__category {
+    background-color: #392e20;
+    color: var(--dark-gold);
+}
+
+.dark-mode .legal-areas__line-card {
+    border-color: var(--dark-border);
+}
+
+.dark-mode .legal-areas__icon-card {
+    background-color: #39232d;
+    color: var(--dark-gold);
+}
+
+.dark-mode .legal-areas__item:hover .legal-areas__text-footer {
+    color: var(--dark-gold);
+}
+
+.dark-mode .legal-areas__item:hover .legal-areas__icon-card {
+    background-color: #641E35;
+    color: #FFFFFF;
+}
+
+
+/* ==========================================
+   INICIO - NOSOTROS
+========================================== */
+
+.dark-mode .legal-about {
+    background-color: #21191e;
+}
+
+.dark-mode .legal-about__title {
+    color: var(--dark-title);
+}
+
+.dark-mode .legal-about__description,
+.dark-mode .legal-about__content {
+    color: var(--dark-text);
+}
+
+.dark-mode .legal-about__eyebrow,
+.dark-mode .legal-about__highlight,
+.dark-mode .legal-about__link {
+    color: var(--dark-gold);
+}
+
+.dark-mode .legal-about__link::after {
+    background-color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   INICIO - COLABORADORES
+========================================== */
+
+.dark-mode .legal-collaborators,
+.dark-mode .legal-collaborators__content {
+    background-color: var(--dark-background);
+}
+
+.dark-mode .legal-collaborators__title {
+    color: var(--dark-title);
+}
+
+.dark-mode .legal-collaborators__description,
+.dark-mode .legal-collaborators__num-title {
+    color: var(--dark-text);
+}
+
+.dark-mode .legal-collaborators__eyebrow,
+.dark-mode .legal-collaborators__num,
+.dark-mode .legal-collaborators__link {
+    color: var(--dark-gold);
+}
+
+.dark-mode .legal-collaborators__data {
+    border-color: var(--dark-border);
+}
+
+.dark-mode .legal-collaborators__link::after {
+    background-color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   INICIO - CONTACTO
+========================================== */
+
+.dark-mode .legal-contact {
+    background-color: #21191e;
+}
+
+.dark-mode .legal-contact__title,
+.dark-mode .legal-contact__subtitle {
+    color: var(--dark-title);
+}
+
+.dark-mode .legal-contact__description,
+.dark-mode .legal-contact__text {
+    color: var(--dark-text);
+}
+
+.dark-mode .legal-contact__eyebrow {
+    color: var(--dark-gold);
+}
+
+.dark-mode .legal-contact__item {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-mode .legal-contact__item-icon {
+    background-color: #39232d;
+    color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   INICIO - FORMULARIO DE CONTACTO
+========================================== */
+
+.dark-mode .legal-contact__form {
+    background-color: var(--dark-card);
+    border-color: var(--dark-border);
+    box-shadow: 0 4px 15px #0003;
+}
+
+.dark-mode .legal-contact__label {
+    color: var(--dark-title);
+}
+
+.dark-mode .legal-contact__input {
+    background-color: var(--dark-background);
+    border-color: var(--dark-border);
+    color: var(--dark-title);
+}
+
+.dark-mode .legal-contact__input::placeholder {
+    color: #a9a1a5;
+}
+
+.dark-mode .legal-contact__input:focus {
+    background-color: #21191e;
+    border-color: var(--dark-gold);
+    box-shadow: 0 0 0 3px #ddab5b20;
+}
+
+.dark-mode .legal-contact__form button {
+    background-color: var(--dark-gold);
+    border-color: var(--dark-gold);
+    color: #490315;
+}
+
+.dark-mode .legal-contact__form button:hover {
+    background-color: #e8c26b;
+    border-color: #e8c26b;
+}
+
+
+/* ==========================================
+   SERVICIOS - FONDOS
+========================================== */
+
+.dark-mode :is(
+    .practicas,
+    .familiar,
+    .penal,
+    .mercantil
+) {
+    background-color: var(--dark-background);
+}
+
+
+/* TÍTULOS Y SUBTÍTULOS */
+
+.dark-mode :is(
+    .practicas__titulo,
+    .practicas__cantidad,
+    .familiar__titulo,
+    .penal__titulo,
+    .mercantil__titulo,
+    .familiar__subtitulo,
+    .penal__subtitulo,
+    .mercantil__subtitulo
+) {
+    color: var(--dark-title);
+}
+
+
+/* DESCRIPCIONES */
+
+.dark-mode :is(
+    .practicas__descripcion,
+    .practicas__validacion-texto,
+    .familiar__descripcion,
+    .penal__descripcion,
+    .mercantil__descripcion,
+    .familiar__texto,
+    .penal__texto,
+    .mercantil__texto
+) {
+    color: var(--dark-text);
+}
+
+
+/* ETIQUETAS DORADAS */
+
+.dark-mode :is(
+    .practicas__etiqueta,
+    .practicas__navegacion-titulo,
+    .practicas__detalle,
+    .practicas__cedula,
+    .practicas__icono
+) {
+    color: var(--dark-gold);
+}
+
+
+/* TARJETAS */
+
+.dark-mode :is(
+    .practicas__estadisticas,
+    .familiar__tarjeta,
+    .penal__tarjeta,
+    .mercantil__tarjeta
+) {
+    background-color: var(--dark-card);
+    border-color: var(--dark-border);
+}
+
+
+/* ESTADÍSTICAS Y ENLACES */
+
+.dark-mode :is(
+    .practicas__validacion,
+    .practicas__enlace
+) {
+    background-color: #30292e;
+    color: var(--dark-title);
+}
+
+.dark-mode .practicas__dato:not(:last-child) {
+    border-color: var(--dark-border);
+}
+
+.dark-mode .practicas__enlace:hover {
+    background-color: #641E35;
+    color: #FFFFFF;
+}
+
+.dark-mode .practicas__enlace:focus-visible {
+    outline-color: var(--dark-gold);
+}
+
+
+/* ICONOS */
+
+.dark-mode :is(
+    .familiar__icono,
+    .penal__icono,
+    .mercantil__icono
+) {
+    background-color: #39232d;
+    color: var(--dark-gold);
+}
+
+
+/* ETIQUETAS DE ESPECIALIDADES */
+
+.dark-mode :is(
+    .familiar__etiqueta,
+    .penal__etiqueta,
+    .mercantil__etiqueta
+) {
+    background-color: #392e20;
+    color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   COLABORADORES
+========================================== */
+
+.dark-mode .colaboradores {
+    background-color: var(--dark-background);
+}
+
+
+/* TÍTULOS Y NOMBRES */
+
+.dark-mode .colaboradores h2,
+.dark-mode .colaboradores .informacion h3 {
+    color: var(--dark-title);
+}
+
+
+/* DESCRIPCIONES */
+
+.dark-mode .colaboradores .introduccion,
+.dark-mode .colaboradores .informacion p {
+    color: var(--dark-text);
+}
+
+
+/* TARJETAS */
+
+.dark-mode .colaboradores .tarjeta {
+    background-color: var(--dark-card);
+    box-shadow: 0 4px 15px #0004;
+}
+
+
+/* ESPECIALIDADES */
+
+.dark-mode .colaboradores .informacion .especialidad {
+    color: var(--dark-gold);
+}
+
+
+/* FOTOGRAFÍAS - CONSERVAR FONDO BLANCO */
+
+.dark-mode .colaboradores .tarjeta img {
+    background-color: #FFFFFF;
+    border-color: #641E35;
+    border-bottom-color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   NOSOTROS - FONDOS
+========================================== */
+
+.dark-mode :is(
+    .nosotros,
+    .historia,
+    .identidad,
+    .pilares,
+    .separador
+) {
+    background-color: var(--dark-background);
+}
+
+
+/* TÍTULOS */
+
+.dark-mode :is(
+    .nosotros__titulo,
+    .historia__titulo,
+    .historia__numero,
+    .identidad__titulo,
+    .identidad__subtitulo,
+    .pilares__titulo,
+    .pilares__subtitulo
+) {
+    color: var(--dark-title);
+}
+
+
+/* DESCRIPCIONES */
+
+.dark-mode :is(
+    .nosotros__descripcion,
+    .historia__texto,
+    .historia__detalle,
+    .identidad__descripcion,
+    .pilares__descripcion,
+    .pilares__texto
+) {
+    color: var(--dark-text);
+}
+
+
+/* ETIQUETAS Y DETALLES DORADOS */
+
+.dark-mode :is(
+    .nosotros__punto,
+    .historia__etiqueta,
+    .identidad__etiqueta,
+    .identidad__categoria,
+    .identidad__pie,
+    .pilares__etiqueta,
+    .pilares__numero,
+    .pilares__pie
+) {
+    color: var(--dark-gold);
+}
+
+
+/* ETIQUETA PRINCIPAL */
+
+.dark-mode .nosotros__etiqueta {
+    background-color: #39232d;
+    color: var(--dark-gold);
+}
+
+
+/* TARJETAS */
+
+.dark-mode :is(
+    .historia__dato,
+    .identidad__tarjeta,
+    .pilares__tarjeta
+) {
+    background-color: var(--dark-card);
+    border-color: var(--dark-border);
+}
+
+
+/* CONSERVAR TARJETA VINO */
+
+.dark-mode .identidad__tarjeta--vino {
+    background-color: #581b2c;
+    border-color: #581b2c;
+}
+
+.dark-mode .identidad__tarjeta--vino
+:is(
+    .identidad__subtitulo,
+    .identidad__descripcion
+) {
+    color: #FFFFFF;
+}
+
+.dark-mode .identidad__tarjeta--vino
+:is(
+    .identidad__categoria,
+    .identidad__pie
+) {
+    color: #f0d28f;
+}
+
+
+/* ICONOS */
+
+.dark-mode :is(
+    .identidad__icono,
+    .pilares__icono
+) {
+    background-color: #39232d;
+    color: var(--dark-gold);
+}
+
+
+/* LÍNEAS DIVISORIAS */
+
+.dark-mode :is(
+    .identidad__cabecera,
+    .pilares__pie
+) {
+    border-color: var(--dark-border);
+}
+
+.dark-mode :is(
+    .identidad__linea,
+    .separador__linea
+) {
+    background-color: var(--dark-gold);
+}
+
+
+/* BANNER DE CONTACTO */
+
+.dark-mode .contacto-banner {
+    background: #21191e;
+}
+
+.dark-mode .contacto-banner__titulo {
+    color: var(--dark-title);
+}
+
+.dark-mode .contacto-banner__etiqueta {
+    color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   VENTANA EMERGENTE DE DESARROLLADORES
+========================================== */
+
+.dark-mode .developers {
+    background-color: var(--dark-card);
+}
+
+.dark-mode :is(
+    .developers__title,
+    .developers__name,
+    .developers__university,
+    .developers__close
+) {
+    color: var(--dark-title);
+}
+
+.dark-mode :is(
+    .developers__description,
+    .developers__role,
+    .developers__career,
+    .developers__year
+) {
+    color: var(--dark-text);
+}
+
+.dark-mode .developers__eyebrow {
+    color: var(--dark-gold);
+}
+
+.dark-mode .developers__image {
+    background-color: #FFFFFF;
+}
+
+.dark-mode .developers__footer {
+    border-color: var(--dark-border);
+}
+
+.dark-mode .developers__close:hover {
+    color: var(--dark-gold);
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVO - MODO OSCURO
+========================================== */
+/* DISEÑO RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    .theme-toggle {
+        top: 18px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+}
 
 /* ==========================================
    FOOTER - EYRA LEGAL
@@ -2841,7 +3484,104 @@ body {
    DISEÑO RESPONSIVO
 ========================================== */
 
-@media screen and (max-width: 480px) {
+/* ==========================================
+   VENTANA EMERGENTE - DISEÑO RESPONSIVO
+========================================== */
+
+@media screen and (max-width: 600px) {
+
+    .developers {
+        width: 92%;
+        max-width: 420px;
+        max-height: 85dvh;
+        margin: auto;
+        border-radius: 10px;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .developers__container {
+        padding: 30px 15px 20px;
+    }
+
+    .developers__close {
+        top: 5px;
+        right: 12px;
+        font-size: 28px;
+    }
+
+    .developers__header {
+        margin-bottom: 20px;
+    }
+
+    .developers__eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .developers__title {
+        font-size: 25px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .developers__description {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .developers__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 10px;
+    }
+
+    .developers__member {
+        min-width: 0;
+        text-align: center;
+    }
+
+    .developers__image {
+        width: 85px;
+        height: 85px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 3px;
+        margin: 0 auto 8px;
+    }
+
+    .developers__name {
+        font-size: 13px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+        margin-bottom: 4px;
+    }
+
+    .developers__role {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .developers__footer {
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+
+    .developers__career {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .developers__university {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .developers__year {
+        font-size: 10px;
+        margin-top: 4px;
+    }
 
     .footer__copyright {
         font-size: 12px;
@@ -2851,25 +3591,32 @@ body {
         font-size: 14px;
     }
 
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media screen and (max-width: 360px) {
+
     .developers__container {
-        padding: 35px 15px;
+        padding: 28px 10px 15px;
     }
 
     .developers__title {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .developers__image {
-        width: 85px;
-        height: 85px;
+        width: 70px;
+        height: 70px;
     }
 
     .developers__name {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .developers__grid {
-        gap: 20px 10px;
+        gap: 15px 8px;
     }
 
+}
 }

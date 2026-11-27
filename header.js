@@ -69,4 +69,3 @@ menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("header__btn--active");
 
 });
-
